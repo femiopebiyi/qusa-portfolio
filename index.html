@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Q USA Auto Shop &amp; Trading — Home of Exotic Performance | Al Wukair, Qatar</title>
   <meta name="description"
-    content="Specialists in exotic, European and American cars in Al Wukair, Qatar. Precision service, performance upgrades, genuine parts and BMC air filters. Book on WhatsApp.">
+    content="Q USA Auto Shop &amp; Trading, Al Wukair, Qatar. Specialists in exotic, European and American cars and the official authorized BMC Air Filter distributor in Qatar. Service, performance, diagnostics and fleet maintenance. Book on WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -564,29 +564,43 @@
       white-space: nowrap
     }
 
-    .partner-logos {
+    .partner-marquee {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent)
+    }
+
+    .partner-track {
       display: flex;
       align-items: center;
-      gap: 18px;
-      flex: 1;
-      flex-wrap: wrap
+      width: max-content;
+      animation: scrollx 30s linear infinite
+    }
+
+    .partner-marquee:hover .partner-track {
+      animation-play-state: paused
     }
 
     .plogo {
-      height: 38px;
-      min-width: 104px;
-      flex: 1;
-      max-width: 160px
+      flex: 0 0 auto;
+      height: 34px;
+      margin-right: 52px;
+      display: flex;
+      align-items: center
     }
 
-    .plogo .ph {
-      border-style: solid;
-      border-color: var(--line)
-    }
-
-    .partner-logos .plogo img {
+    .plogo img {
+      height: 100%;
+      width: auto;
       object-fit: contain;
-      padding: 2px 0
+      opacity: .8;
+      transition: opacity .2s
+    }
+
+    .plogo img:hover {
+      opacity: 1
     }
 
     /* ---------- marque ticker ---------- */
@@ -1057,9 +1071,20 @@
     .ethos b {
       font-family: 'Anton', sans-serif;
       text-transform: uppercase;
-      font-size: 19px;
+      font-size: 32px;
       color: var(--red-bright);
-      letter-spacing: .02em
+      letter-spacing: .02em;
+      line-height: 1
+    }
+
+    .ethos span {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 8px
     }
 
     .checks {
@@ -1448,7 +1473,8 @@
         transition: none
       }
 
-      .ticker-track {
+      .ticker-track,
+      .partner-track {
         animation: none
       }
 
@@ -1523,8 +1549,9 @@
         <span class="eyebrow">Al Wukair <span class="star">★</span> Qatar</span>
         <h1 class="display">Home of<br>Exotic <span class="r">Performance</span></h1>
         <div class="hero-sub">
-          <p class="hero-lead"><b>Specialists in exotic, European and American cars.</b> Precision service, performance
-            upgrades and genuine parts, delivered to the standard your car deserves.</p>
+          <p class="hero-lead"><b>From exotic and performance machines to everyday European and American cars, and
+            corporate fleets.</b> Precision service, diagnostics, performance upgrades and genuine parts, delivered to
+            the standard your car deserves.</p>
           <span class="hero-kicker">Precision<span class="sep">/</span>Passion<span
               class="sep">/</span>Perfection</span>
         </div>
@@ -1553,19 +1580,25 @@
   <div class="partners">
     <div class="wrap">
       <span class="lbl">Trusted parts partners</span>
-      <div class="partner-logos">
-        <!-- MEDIA SLOTS · partner logos -->
-        <div class="plogo slot">
-          <img src="assets/logo-motul-trimmed.png" alt="Motul">
-        </div>
-        <div class="plogo slot">
-          <img src="assets/logo-liqui-trimmed.png" alt="Liqui Moly">
-        </div>
-        <div class="plogo slot">
-          <img src="assets/logo-bmc-trimmed.png" alt="BMC Air Filters">
-        </div>
-        <div class="plogo slot">
-          <img src="assets/logo-mopar-trimmed.png" alt="Mopar">
+      <div class="partner-marquee">
+        <!-- MEDIA SLOTS · partner logos. Two identical sets = seamless loop. -->
+        <div class="partner-track">
+          <!-- set A -->
+          <span class="plogo"><img src="assets/logo-bmc-trimmed.png" alt="BMC Air Filters"></span>
+          <span class="plogo"><img src="assets/logo-motul-trimmed.png" alt="Motul"></span>
+          <span class="plogo"><img src="assets/logo-liqui-trimmed.png" alt="Liqui Moly"></span>
+          <span class="plogo"><img src="assets/logo-bosch-trimmed.png" alt="Bosch"></span>
+          <span class="plogo"><img src="assets/logo-amaron-trimmed.png" alt="Amaron"></span>
+          <span class="plogo"><img src="assets/logo-veedol-trimmed.png" alt="Veedol"></span>
+          <span class="plogo"><img src="assets/logo-motorcraft-trimmed.png" alt="Ford Motorcraft"></span>
+          <!-- set B (duplicate for seamless scroll) -->
+          <span class="plogo" aria-hidden="true"><img src="assets/logo-bmc-trimmed.png" alt=""></span>
+          <span class="plogo" aria-hidden="true"><img src="assets/logo-motul-trimmed.png" alt=""></span>
+          <span class="plogo" aria-hidden="true"><img src="assets/logo-liqui-trimmed.png" alt=""></span>
+          <span class="plogo" aria-hidden="true"><img src="assets/logo-bosch-trimmed.png" alt=""></span>
+          <span class="plogo" aria-hidden="true"><img src="assets/logo-amaron-trimmed.png" alt=""></span>
+          <span class="plogo" aria-hidden="true"><img src="assets/logo-veedol-trimmed.png" alt=""></span>
+          <span class="plogo" aria-hidden="true"><img src="assets/logo-motorcraft-trimmed.png" alt=""></span>
         </div>
       </div>
     </div>
@@ -1650,7 +1683,16 @@
             <span class="svc-num">05</span>
             <div>
               <h3>Genuine Parts &amp; Filters</h3>
-              <p>Motul, Liqui Moly, Mopar and genuine BMC air filters, stocked, supplied and installed in-house.</p>
+              <p>Motul, Liqui Moly, Bosch, Amaron, Veedol, Ford Motorcraft and genuine BMC air filters, stocked,
+                supplied and installed in-house.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <span class="svc-num">06</span>
+            <div>
+              <h3>Fleet Maintenance</h3>
+              <p>Scheduled and preventive maintenance, diagnostics, health reporting and priority support for corporate,
+                commercial and institutional fleets, with pickup and delivery.</p>
             </div>
           </div>
         </div>
@@ -1659,19 +1701,17 @@
   </section>
 
   <!-- ======================= BMC ======================= -->
-  <!-- NOTE: distributor status NOT yet confirmed by client. Copy below uses safe "available at" language.
-     If they confirm official/authorized BMC distributor for Qatar, switch headline to
-     "Qatar's Official BMC Air Filter Distributor" and add the Parts 24 shop link + filter-finder. -->
   <section class="section bmc" id="bmc">
     <div class="wrap bmc-grid">
       <div class="bmc-copy reveal">
-        <span class="eyebrow gold">Performance starts with air</span>
-        <h2>BMC Air Filters,<br><em>available at Q USA</em>
+        <span class="eyebrow gold">Official authorized distributor · Qatar</span>
+        <h2>Qatar's Official<br><em>BMC Air Filter</em> Distributor
           <span class="flag" title="Made in Italy"><i style="background:#009246"></i><i style="background:#fff"></i><i
               style="background:#CE2B37"></i></span>
         </h2>
-        <p class="bmc-lead">We stock and install genuine BMC air filters, the Italian-engineered performance filter
-          built for cars that demand more. Higher airflow than standard paper, and made for Qatar's conditions.</p>
+        <p class="bmc-lead">Q USA is the official authorized distributor of BMC Air Filters in Qatar. We supply and
+          install the genuine Italian-engineered performance filter built for cars that demand more, with higher airflow
+          than standard paper and made for Qatar's conditions.</p>
         <div class="bmc-feats">
           <span>Multi-layer <b>oiled cotton</b></span>
           <span>Filters to <b>7 microns</b></span>
@@ -1825,13 +1865,14 @@
     <div class="wrap about-grid">
       <div class="reveal">
         <span class="eyebrow">Who we are</span>
-        <h2 class="display">Driven by<br>excellence</h2>
-        <p class="lead"><b>Every car that comes through our doors is treated like it's our own.</b> We are a team of
-          specialists who love these machines as much as the people who own them, and it shows in the work.</p>
+        <h2 class="display">Driven by quality,<br>powered by expertise</h2>
+        <p class="lead"><b>Every car that comes through our doors is treated like it's our own.</b> Behind it is a team
+          of skilled technicians and service advisors who love these machines as much as the people who own them, and it
+          shows in the work.</p>
         <div class="ethos">
-          <div><b>Precision</b></div>
-          <div><b>Passion</b></div>
-          <div><b>Perfection</b></div>
+          <div><b>12</b><span>Technicians</span></div>
+          <div><b>8</b><span>Service Bays</span></div>
+          <div><b>20+</b><span>Yrs Experience</span></div>
         </div>
         <ul class="checks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
@@ -1841,15 +1882,19 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M20 6L9 17l-5-5" />
+            </svg> Advanced diagnostic equipment in a modern, multi-bay workshop</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
             </svg> Transparent pricing, agreed before any work starts</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M20 6L9 17l-5-5" />
-            </svg> Genuine parts only, from partners we trust</li>
+            </svg> Genuine, OEM and aftermarket parts from trusted partners</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M20 6L9 17l-5-5" />
-            </svg> The same care for an M3 as for an Aventador</li>
+            </svg> Live workshop monitoring, with pickup and delivery across Qatar</li>
         </ul>
       </div>
 
@@ -1886,14 +1931,19 @@
             </svg>
             Chat on WhatsApp
           </a>
-          <a class="btn btn-ghost btn-lg" href="tel:+97466338775">Call +974 6633 8775</a>
+          <a class="btn btn-ghost btn-lg" href="tel:+97430677033">Call +974 3067 7033</a>
         </div>
         <div class="cmeta">
-          <div class="row"><span class="k">Location</span><span class="v">Ezdan Oasis, Al Wukair, Qatar<br><a
-                href="https://www.google.com/maps/search/?api=1&amp;query=Q+USA+Auto+Shop+Al+Wukair+Qatar"
+          <div class="row"><span class="k">Location</span><span class="v">Building No. 4, Zone 91, Street 7048<br>Ezdan
+              Oasis D Block, Al Wukair, Doha, Qatar<br><a
+                href="https://www.google.com/maps/search/?api=1&amp;query=Q+USA+Auto+Shop+Ezdan+Oasis+Al+Wukair+Qatar"
                 target="_blank" rel="noopener">Get directions →</a></span></div>
+          <div class="row"><span class="k">Phone</span><span class="v"><a href="tel:+97430677033">+974 3067 7033</a><br><a
+                href="tel:+97470999809">+974 7099 9809</a></span></div>
           <div class="row"><span class="k">WhatsApp</span><span class="v"><a href="https://wa.me/97466338775"
                 target="_blank" rel="noopener">+974 6633 8775</a></span></div>
+          <div class="row"><span class="k">Email</span><span class="v"><a
+                href="mailto:q.usa.autoshop@gmail.com">q.usa.autoshop@gmail.com</a></span></div>
           <div class="row"><span class="k">Instagram</span><span class="v"><a
                 href="https://www.instagram.com/qusa.autoshop" target="_blank" rel="noopener">@qusa.autoshop</a></span>
           </div>
@@ -1939,14 +1989,16 @@
       <div class="fcol">
         <h4>Contact</h4>
         <a href="https://wa.me/97466338775" target="_blank" rel="noopener">WhatsApp to book</a>
-        <a href="tel:+97466338775">+974 6633 8775</a>
+        <a href="tel:+97430677033">+974 3067 7033</a>
+        <a href="tel:+97470999809">+974 7099 9809</a>
+        <a href="mailto:q.usa.autoshop@gmail.com">q.usa.autoshop@gmail.com</a>
         <a href="https://www.instagram.com/qusa.autoshop" target="_blank" rel="noopener">@qusa.autoshop</a>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Q+USA+Auto+Shop+Al+Wukair+Qatar" target="_blank"
           rel="noopener">Directions</a>
       </div>
     </div>
     <div class="wrap foot-bar">
-      <span>© 2026 Q USA Auto Shop &amp; Trading · Al Wukair, Qatar</span>
+      <span>© 2026 Q USA Auto Shop &amp; Trading · Est. 2023 · Al Wukair, Qatar</span>
       <span class="credit">Website by <b>FEMI WEB SERVICES</b> · Ibadan, Nigeria</span>
     </div>
   </footer>
