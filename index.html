@@ -953,10 +953,6 @@
       overflow: hidden
     }
 
-    .rail-card.wide .rail-media {
-      aspect-ratio: 16/10
-    }
-
     .rail-media::after {
       content: "";
       position: absolute;
@@ -1762,14 +1758,14 @@
           </div>
         </div>
 
-        <!-- WIDE case-study tile · video -->
-        <div class="rail-card wide">
+        <!-- video tile -->
+        <div class="rail-card">
           <div class="rail-media slot">
             <video muted loop playsinline preload="none" poster="assets/work-aston-restoration.jpg" class="rail-video">
               <source src="assets/aston-martin-rapide.mp4" type="video/mp4">
             </video>
             <div class="ph">
-              <span class="pi">Gallery · Video (wide)</span>
+              <span class="pi">Gallery · Video</span>
               <span class="pf">assets/aston-martin-rapide.mp4</span>
             </div>
             <span class="rail-tag vid">▶ Reel</span>
@@ -1906,13 +1902,13 @@
 
       <div class="hours reveal">
         <span class="eyebrow">Opening hours</span>
-        <div class="hrow closed"><span class="d">Monday</span><span class="t">Closed</span></div>
-        <div class="hrow"><span class="d">Tuesday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
-        <div class="hrow"><span class="d">Wednesday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
-        <div class="hrow"><span class="d">Thursday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
-        <div class="hrow"><span class="d">Friday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
-        <div class="hrow"><span class="d">Saturday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
-        <div class="hrow"><span class="d">Sunday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
+        <div class="hrow"><span class="d">Saturday</span><span class="t">8:00–20:00</span></div>
+        <div class="hrow"><span class="d">Sunday</span><span class="t">8:00–20:00</span></div>
+        <div class="hrow"><span class="d">Monday</span><span class="t">8:00–20:00</span></div>
+        <div class="hrow"><span class="d">Tuesday</span><span class="t">8:00–20:00</span></div>
+        <div class="hrow"><span class="d">Wednesday</span><span class="t">8:00–20:00</span></div>
+        <div class="hrow"><span class="d">Thursday</span><span class="t">8:00–20:00</span></div>
+        <div class="hrow"><span class="d">Friday</span><span class="t">8:00–20:00</span></div>
         <!-- Optional: replace this hours card's sibling with a Google Maps <iframe> embed if you want a live map. -->
       </div>
     </div>
@@ -2024,13 +2020,13 @@
       rail.addEventListener('pointerup', up); rail.addEventListener('pointercancel', up); rail.addEventListener('pointerleave', up);
     })();
 
-    // highlight today's hours row (skip closed Monday)
+    // highlight today's hours row
     (function () {
       var day = new Date().getDay(); // 0 Sun..6 Sat
-      var order = [1, 2, 3, 4, 5, 6, 0];   // rows Mon..Sun
+      var order = [6, 0, 1, 2, 3, 4, 5];   // rows Sat..Fri
       var rows = document.querySelectorAll('.hours .hrow');
       var idx = order.indexOf(day);
-      if (idx > -1 && rows[idx] && !rows[idx].classList.contains('closed')) rows[idx].classList.add('today');
+      if (idx > -1 && rows[idx]) rows[idx].classList.add('today');
     })();
   </script>
 </body>
