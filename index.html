@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q USA Auto Shop &amp; Trading — Home of Exotic Performance | Al Wukair, Qatar</title>
+  <meta name="description"
+    content="Specialists in exotic, European and American cars in Al Wukair, Qatar. Precision service, performance upgrades, genuine parts and BMC air filters. Book on WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1A1A1A;
+      --bg-deep: #111111;
+      --surface: #212121;
+      --surface-2: #2A2A2A;
+      --red: #CC0000;
+      --red-bright: #FF3A3A;
+      --gold: #F5A623;
+      --white: #FFFFFF;
+      --text: #EDEDED;
+      --muted: #9A9A9A;
+      --muted-2: #6E6E6E;
+      --line: rgba(255, 255, 255, .09);
+      --line-strong: rgba(255, 255, 255, .16);
+      --maxw: 1240px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden
+    }
+
+    body {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img,
+    video {
+      display: block;
+      max-width: 100%
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 28px
+    }
+
+    /* ---------- shared type ---------- */
+    .display {
+      font-family: 'Anton', Impact, sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: .005em;
+      line-height: .94
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--red);
+      flex: none
+    }
+
+    .eyebrow.gold {
+      color: var(--gold)
+    }
+
+    .eyebrow.gold::before {
+      background: var(--gold)
+    }
+
+    .star {
+      color: var(--gold)
+    }
+
+    /* redline signature rule */
+    .redline {
+      position: relative;
+      height: 2px;
+      background: var(--line);
+      overflow: hidden
+    }
+
+    .redline::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 38%;
+      background: linear-gradient(90deg, transparent, var(--red) 40%, var(--red-bright));
+    }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Inter Tight';
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 2px;
+      cursor: pointer;
+      border: none;
+      transition: transform .15s var(--ease), background .2s, color .2s, box-shadow .2s;
+      white-space: nowrap
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      flex: none
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 8px 26px rgba(204, 0, 0, .32)
+    }
+
+    .btn-red:hover {
+      background: var(--red-bright);
+      transform: translateY(-2px)
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid var(--line-strong)
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--red-bright);
+      color: var(--red-bright)
+    }
+
+    .btn-lg {
+      padding: 17px 30px;
+      font-size: 16px
+    }
+
+    /* ---------- media slot placeholders (fill in VS Code) ---------- */
+    .slot {
+      position: relative;
+      overflow: hidden;
+      background: var(--surface-2);
+      isolation: isolate
+    }
+
+    .slot .ph {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      text-align: center;
+      padding: 18px;
+      background:
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, .02) 0 12px, transparent 12px 24px),
+        var(--surface-2);
+      border: 1px dashed rgba(255, 255, 255, .14);
+    }
+
+    .slot .ph .pf {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--red-bright);
+      letter-spacing: .02em;
+      word-break: break-all
+    }
+
+    .slot .ph .pd {
+      font-size: 12px;
+      color: var(--muted);
+      max-width: 34ch;
+      line-height: 1.45
+    }
+
+    .slot .ph .pi {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--muted-2);
+      letter-spacing: .18em;
+      text-transform: uppercase
+    }
+
+    .slot img,
+    .slot video {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    /* ---------- nav ---------- */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      transition: background .3s, border-color .3s, backdrop-filter .3s;
+      border-bottom: 1px solid transparent
+    }
+
+    header.solid {
+      background: rgba(17, 17, 17, .86);
+      backdrop-filter: blur(12px);
+      border-bottom-color: var(--line)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 44px
+    }
+
+    .brand-logo {
+      height: 42px;
+      width: auto;
+      object-fit: contain
+    }
+
+    .brand-word {
+      display: flex;
+      flex-direction: column;
+      line-height: 1
+    }
+
+    .brand-word b {
+      font-family: 'Anton', sans-serif;
+      font-size: 22px;
+      letter-spacing: .02em;
+      color: #fff;
+      text-transform: uppercase
+    }
+
+    .brand-word span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: .34em;
+      color: var(--muted);
+      margin-top: 3px
+    }
+
+    .brand-word b i {
+      color: var(--red);
+      font-style: normal
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #D6D6D6;
+      letter-spacing: .01em;
+      transition: color .2s;
+      position: relative
+    }
+
+    .nav-links a:not(.btn):hover {
+      color: #fff
+    }
+
+    .nav-links a:not(.btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -6px;
+      height: 2px;
+      background: var(--red);
+      transition: right .25s var(--ease)
+    }
+
+    .nav-links a:not(.btn):hover::after {
+      right: 0
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 2
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: #fff;
+      margin: 6px 0;
+      transition: .28s var(--ease)
+    }
+
+    .nav-toggle.x span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg)
+    }
+
+    .nav-toggle.x span:nth-child(2) {
+      opacity: 0
+    }
+
+    .nav-toggle.x span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg)
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--bg-deep)
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    .hero-media .slot {
+      position: absolute;
+      inset: 0
+    }
+
+    .hero-media video,
+    .hero-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(17, 17, 17, .55) 0%, rgba(17, 17, 17, .10) 26%, rgba(17, 17, 17, .42) 60%, rgba(17, 17, 17, .96) 100%),
+        linear-gradient(90deg, rgba(17, 17, 17, .72) 0%, rgba(17, 17, 17, .10) 55%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding: 0 0 74px
+    }
+
+    .hero-inner .wrap {
+      width: 100%
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 10.5vw, 150px);
+      color: #fff;
+      margin: 24px 0 0;
+      max-width: 13ch
+    }
+
+    .hero h1 .r {
+      color: var(--red-bright)
+    }
+
+    .hero-sub {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px
+    }
+
+    .hero-lead {
+      font-size: clamp(15px, 1.9vw, 18px);
+      color: #CFCFCF;
+      max-width: 50ch
+    }
+
+    .hero-lead b {
+      color: #fff;
+      font-weight: 600
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px
+    }
+
+    .hero-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      letter-spacing: .16em;
+      color: #fff;
+      text-transform: uppercase;
+      white-space: nowrap
+    }
+
+    .hero-kicker .sep {
+      color: var(--red);
+      margin: 0 8px
+    }
+
+    /* tach redline bar */
+    .tach {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      height: 34px;
+      display: flex;
+      align-items: flex-end;
+      gap: 0;
+      padding: 0 28px;
+      pointer-events: none
+    }
+
+    .tach .tick {
+      flex: 1;
+      background: var(--line);
+      height: 9px;
+      transform-origin: bottom
+    }
+
+    .tach .tick.mid {
+      height: 15px
+    }
+
+    .tach .tick.red {
+      background: var(--red)
+    }
+
+    .tach .tick.redb {
+      background: var(--red-bright);
+      height: 22px
+    }
+
+    .scroll-cue {
+      position: absolute;
+      right: 28px;
+      bottom: 74px;
+      z-index: 3;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .2em;
+      color: var(--muted);
+      writing-mode: vertical-rl;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .scroll-cue::after {
+      content: "";
+      width: 1px;
+      height: 46px;
+      background: linear-gradient(var(--red), transparent);
+      animation: cue 1.8s var(--ease) infinite
+    }
+
+    @keyframes cue {
+      0% {
+        opacity: .2;
+        transform: scaleY(.4)
+      }
+
+      50% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: .2;
+        transform: scaleY(1)
+      }
+    }
+
+    /* ---------- partners strip ---------- */
+    .partners {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .partners .wrap {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      flex-wrap: wrap
+    }
+
+    .partners .lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      white-space: nowrap
+    }
+
+    .partner-logos {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex: 1;
+      flex-wrap: wrap
+    }
+
+    .plogo {
+      height: 38px;
+      min-width: 104px;
+      flex: 1;
+      max-width: 160px
+    }
+
+    .plogo .ph {
+      border-style: solid;
+      border-color: var(--line)
+    }
+
+    .partner-logos .plogo img {
+      object-fit: contain;
+      padding: 2px 0
+    }
+
+    /* ---------- marque ticker ---------- */
+    .ticker {
+      background: var(--red);
+      color: #fff;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(0, 0, 0, .2)
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 0;
+      width: max-content;
+      animation: scrollx 34s linear infinite
+    }
+
+    .ticker-item {
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: .04em;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      white-space: nowrap
+    }
+
+    .ticker-item .star {
+      color: #fff;
+      opacity: .8;
+      font-size: 13px
+    }
+
+    @keyframes scrollx {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ---------- section base ---------- */
+    .section {
+      padding: clamp(72px, 10vw, 132px) 0;
+      position: relative
+    }
+
+    .sec-head {
+      max-width: 720px;
+      margin-bottom: 56px
+    }
+
+    .sec-head h2 {
+      font-size: clamp(34px, 5.4vw, 68px);
+      color: #fff;
+      margin-top: 18px
+    }
+
+    .sec-head p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-top: 20px;
+      max-width: 56ch
+    }
+
+    /* ---------- services ---------- */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 26px;
+      align-items: stretch
+    }
+
+    .svc-feature {
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+      min-height: 520px
+    }
+
+    .svc-feature .cap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      padding: 26px;
+      background: linear-gradient(transparent, rgba(17, 17, 17, .92));
+    }
+
+    .svc-feature .cap .k {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .2em;
+      color: var(--red-bright);
+      text-transform: uppercase
+    }
+
+    .svc-feature .cap h3 {
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+      color: #fff;
+      margin-top: 8px;
+      letter-spacing: .01em
+    }
+
+    .svc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .svc-item {
+      padding: 26px 4px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 22px;
+      transition: padding-left .3s var(--ease), background .3s
+    }
+
+    .svc-item:hover {
+      padding-left: 16px;
+      background: linear-gradient(90deg, rgba(204, 0, 0, .06), transparent)
+    }
+
+    .svc-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--red);
+      font-weight: 700;
+      padding-top: 5px
+    }
+
+    .svc-item h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -.01em
+    }
+
+    .svc-item p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 6px;
+      max-width: 52ch
+    }
+
+    /* ---------- BMC section ---------- */
+    .bmc {
+      background: linear-gradient(135deg, #1E1412 0%, #1A1A1A 55%, #141414 100%);
+      position: relative;
+      overflow: hidden
+    }
+
+    .bmc::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .5;
+      background: radial-gradient(80% 120% at 100% 0%, rgba(204, 0, 0, .18), transparent 55%)
+    }
+
+    .bmc-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center
+    }
+
+    .bmc-copy h2 {
+      font-size: clamp(30px, 4.4vw, 52px);
+      color: #fff;
+      margin: 18px 0 20px;
+      line-height: 1.02
+    }
+
+    .bmc-copy h2 em {
+      font-style: normal;
+      color: var(--red-bright)
+    }
+
+    .bmc-copy .flag {
+      display: inline-flex;
+      gap: 0;
+      vertical-align: middle;
+      margin-left: 10px;
+      border-radius: 2px;
+      overflow: hidden;
+      transform: translateY(2px)
+    }
+
+    .bmc-copy .flag i {
+      display: block;
+      width: 8px;
+      height: 20px
+    }
+
+    .bmc-lead {
+      color: #CBCBCB;
+      font-size: 16px;
+      max-width: 50ch
+    }
+
+    .bmc-feats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0
+    }
+
+    .bmc-feats span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .04em;
+      color: #DDD;
+      border: 1px solid var(--line-strong);
+      border-radius: 2px;
+      padding: 8px 12px
+    }
+
+    .bmc-feats span b {
+      color: var(--gold);
+      font-weight: 700
+    }
+
+    .bmc-models {
+      margin: 20px 0 26px
+    }
+
+    .bmc-models .mh {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      margin-bottom: 12px
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .chip {
+      font-size: 13px;
+      color: #E4E4E4;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 7px 12px
+    }
+
+    .chip.more {
+      color: var(--red-bright);
+      border-color: rgba(255, 58, 58, .35)
+    }
+
+    .bmc-note {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 16px
+    }
+
+    .bmc-media {
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+      min-height: 460px;
+      border: 1px solid var(--line)
+    }
+
+    /* ---------- work / horizontal gallery ---------- */
+    .work {
+      background: var(--bg-deep)
+    }
+
+    .work-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 44px
+    }
+
+    .work-nav {
+      display: flex;
+      gap: 10px
+    }
+
+    .work-nav button {
+      width: 52px;
+      height: 52px;
+      border-radius: 2px;
+      border: 1.5px solid var(--line-strong);
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: border-color .2s, background .2s, color .2s
+    }
+
+    .work-nav button:hover {
+      border-color: var(--red-bright);
+      color: var(--red-bright)
+    }
+
+    .work-nav button svg {
+      width: 22px;
+      height: 22px
+    }
+
+    .rail {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 14px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--red) transparent;
+      cursor: grab
+    }
+
+    .rail.drag {
+      cursor: grabbing;
+      scroll-snap-type: none
+    }
+
+    .rail::-webkit-scrollbar {
+      height: 6px
+    }
+
+    .rail::-webkit-scrollbar-thumb {
+      background: var(--red);
+      border-radius: 3px
+    }
+
+    .rail::-webkit-scrollbar-track {
+      background: var(--line)
+    }
+
+    .rail-card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      position: relative
+    }
+
+    .rail-media {
+      position: relative;
+      height: min(500px, 100vw);
+      aspect-ratio: 4/5;
+      border-radius: 3px;
+      overflow: hidden
+    }
+
+    .rail-card.wide .rail-media {
+      aspect-ratio: 16/10
+    }
+
+    .rail-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+      background: linear-gradient(transparent 55%, rgba(17, 17, 17, .82))
+    }
+
+    .rail-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 4;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(204, 0, 0, .9);
+      padding: 5px 10px;
+      border-radius: 2px
+    }
+
+    .rail-tag.vid {
+      background: rgba(17, 17, 17, .7);
+      border: 1px solid var(--line-strong);
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .rail-cap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 4;
+      padding: 20px
+    }
+
+    .rail-cap b {
+      display: block;
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      font-size: 21px;
+      color: #fff;
+      letter-spacing: .01em
+    }
+
+    .rail-cap span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .1em;
+      color: var(--red-bright)
+    }
+
+    /* ---------- about / team ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center
+    }
+
+    .about h2 {
+      font-size: clamp(32px, 4.8vw, 58px);
+      color: #fff;
+      margin: 18px 0 22px;
+      line-height: 1.0
+    }
+
+    .about .lead {
+      color: #CBCBCB;
+      font-size: 17px;
+      max-width: 50ch;
+      margin-bottom: 22px
+    }
+
+    .about .lead b {
+      color: #fff
+    }
+
+    .ethos {
+      display: flex;
+      gap: 0;
+      margin: 26px 0;
+      border: 1px solid var(--line)
+    }
+
+    .ethos div {
+      flex: 1;
+      padding: 18px 16px;
+      text-align: center;
+      border-left: 1px solid var(--line)
+    }
+
+    .ethos div:first-child {
+      border-left: none
+    }
+
+    .ethos b {
+      font-family: 'Anton', sans-serif;
+      text-transform: uppercase;
+      font-size: 19px;
+      color: var(--red-bright);
+      letter-spacing: .02em
+    }
+
+    .checks {
+      list-style: none;
+      display: grid;
+      gap: 14px
+    }
+
+    .checks li {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+      font-weight: 500;
+      color: #E4E4E4
+    }
+
+    .checks svg {
+      width: 22px;
+      height: 22px;
+      flex: none;
+      margin-top: 1px
+    }
+
+    .about-media {
+      display: flex;
+      justify-content: center;
+      height: 100%
+    }
+
+    .about-media .slot {
+      border-radius: 3px;
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 9/16
+    }
+
+    /* ---------- contact ---------- */
+    .contact {
+      background: var(--bg-deep)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 56px
+    }
+
+    .contact h2 {
+      font-size: clamp(34px, 5vw, 64px);
+      color: #fff;
+      margin: 18px 0 22px;
+      line-height: .98
+    }
+
+    .contact .lead {
+      color: #CBCBCB;
+      font-size: 17px;
+      max-width: 42ch;
+      margin-bottom: 28px
+    }
+
+    .cta-stack {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+      margin-bottom: 30px
+    }
+
+    .cmeta {
+      display: grid;
+      gap: 18px;
+      margin-top: 8px
+    }
+
+    .cmeta .row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .cmeta .k {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      padding-top: 2px
+    }
+
+    .cmeta .v {
+      color: #EDEDED
+    }
+
+    .cmeta .v a {
+      color: var(--red-bright)
+    }
+
+    .hours {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 30px 28px
+    }
+
+    .hours .eyebrow {
+      margin-bottom: 20px
+    }
+
+    .hrow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 15px
+    }
+
+    .hrow:last-child {
+      border-bottom: none
+    }
+
+    .hrow .d {
+      color: #DADADA;
+      font-weight: 500
+    }
+
+    .hrow .t {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      color: var(--muted)
+    }
+
+    .hrow.closed .t {
+      color: var(--red-bright)
+    }
+
+    .hrow.today {
+      margin: 0 -28px;
+      padding-left: 28px;
+      padding-right: 28px;
+      background: rgba(204, 0, 0, .08);
+      border-left: 3px solid var(--red)
+    }
+
+    .hrow.today .d {
+      color: #fff
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      background: #0D0D0D;
+      border-top: 1px solid var(--line)
+    }
+
+    .foot {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding: 64px 0 34px
+    }
+
+    .foot .lede {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 36ch;
+      margin-top: 18px
+    }
+
+    .foot .logo-slot {
+      margin-top: 22px;
+      width: 150px;
+      height: 64px
+    }
+
+    .foot .logo-slot img {
+      object-fit: contain
+    }
+
+    .fcol h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 16px
+    }
+
+    .fcol a {
+      display: block;
+      color: #C4C4C4;
+      font-size: 14.5px;
+      margin-bottom: 11px;
+      transition: color .2s
+    }
+
+    .fcol a:hover {
+      color: #fff
+    }
+
+    .foot-bar {
+      border-top: 1px solid var(--line);
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--muted-2);
+      letter-spacing: .03em
+    }
+
+    .foot-bar .credit b {
+      color: var(--gold)
+    }
+
+    /* ---------- sticky mobile whatsapp ---------- */
+    .wa-fab {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 90;
+      display: none;
+      background: var(--red);
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 -8px 24px rgba(0, 0, 0, .4)
+    }
+
+    .wa-fab svg {
+      width: 20px;
+      height: 20px
+    }
+
+    /* ---------- reveal ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .8s var(--ease), transform .8s var(--ease)
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    /* ---------- responsive ---------- */
+    @media(max-width:1000px) {
+      .svc-grid {
+        grid-template-columns: 1fr
+      }
+
+      .svc-feature {
+        min-height: 360px;
+        order: 2
+      }
+
+      .bmc-grid {
+        grid-template-columns: 1fr;
+        gap: 36px
+      }
+
+      .bmc-media {
+        min-height: 320px;
+        order: -1
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px
+      }
+
+      .foot {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:680px) {
+      .wrap {
+        padding: 0 20px
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 74px 0 auto 0;
+        background: rgba(13, 13, 13, .98);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 26px;
+        border-bottom: 1px solid var(--line);
+        transform: translateY(-130%);
+        transition: transform .34s var(--ease);
+        max-height: calc(100vh - 74px);
+        overflow: auto
+      }
+
+      .nav-links.open {
+        transform: none
+      }
+
+      .nav-links a:not(.btn) {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line)
+      }
+
+      .nav-links a:not(.btn)::after {
+        display: none
+      }
+
+      .nav-links .btn {
+        margin-top: 16px;
+        justify-content: center
+      }
+
+      .nav-toggle {
+        display: block
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 11vw, 60px);
+        letter-spacing: 0
+      }
+
+      .hero-sub {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px
+      }
+
+      .hero-kicker {
+        order: -1
+      }
+
+      .scroll-cue {
+        display: none
+      }
+
+      .foot {
+        grid-template-columns: 1fr
+      }
+
+      .ethos {
+        flex-wrap: wrap
+      }
+
+      .ethos div {
+        min-width: 33%
+      }
+
+      .wa-fab {
+        display: flex
+      }
+
+      body {
+        padding-bottom: 54px
+      }
+
+      .cmeta .row {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        scroll-behavior: auto !important
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none
+      }
+
+      .ticker-track {
+        animation: none
+      }
+
+      .scroll-cue::after {
+        animation: none
+      }
+
+      .btn,
+      .svc-item {
+        transition: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================= NAV ======================= -->
+  <header id="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Q USA Auto Shop home">
+        <!-- MEDIA SLOT · logo · replace src, then it shows automatically -->
+        <img class="brand-logo" src="assets/logo-trimmed.png" alt="Q USA Auto Shop &amp; Trading logo"
+          onerror="this.style.display='none';var w=document.getElementById('brandWord');if(w)w.style.display='flex';">
+        <span class="brand-word" id="brandWord" style="display:none">
+          <b>Q<i>·</i>USA</b><span>AUTO SHOP</span>
+        </span>
+      </a>
+      <nav class="nav-links" id="menu">
+        <a href="#services">Services</a>
+        <a href="#bmc">BMC Filters</a>
+        <a href="#work">Our Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-red"
+          href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service" target="_blank"
+          rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+          </svg>
+          WhatsApp
+        </a>
+      </nav>
+      <button class="nav-toggle" id="toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <a id="top"></a>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="hero-media">
+      <!-- MEDIA SLOT · hero background video (muted loop). poster is the still shown before play. -->
+      <div class="slot">
+        <video autoplay muted loop playsinline preload="none" poster="assets/hero-two-lamborghinis.jpg">
+          <source src="assets/hero-car.mp4" type="video/mp4">
+        </video>
+        <div class="ph">
+          <span class="pi">Hero · Video + Poster</span>
+          <span class="pf">assets/hero-workshop-montage.mp4</span>
+          <span class="pf">poster: assets/hero-two-lamborghinis.jpg</span>
+          <span class="pd">Looping workshop montage (engine bays, lifts, car reveals). Poster = the "Two Lamborghinis at
+            Q USA frontage" shot, without text overlay (5/5 hero pick).</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scrim"></div>
+
+    <div class="hero-inner">
+      <div class="wrap">
+        <span class="eyebrow">Al Wukair <span class="star">★</span> Qatar</span>
+        <h1 class="display">Home of<br>Exotic <span class="r">Performance</span></h1>
+        <div class="hero-sub">
+          <p class="hero-lead"><b>Specialists in exotic, European and American cars.</b> Precision service, performance
+            upgrades and genuine parts, delivered to the standard your car deserves.</p>
+          <span class="hero-kicker">Precision<span class="sep">/</span>Passion<span
+              class="sep">/</span>Perfection</span>
+        </div>
+        <div class="hero-cta">
+          <a class="btn btn-red btn-lg"
+            href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
+            target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+            </svg>
+            Book on WhatsApp
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#work">See our work</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tach" aria-hidden="true">
+      <!-- redline signature: tach ticks along the base of the hero -->
+    </div>
+    <span class="scroll-cue">SCROLL</span>
+  </section>
+
+  <!-- ======================= PARTNERS ======================= -->
+  <div class="partners">
+    <div class="wrap">
+      <span class="lbl">Trusted parts partners</span>
+      <div class="partner-logos">
+        <!-- MEDIA SLOTS · partner logos -->
+        <div class="plogo slot">
+          <img src="assets/logo-motul-trimmed.png" alt="Motul">
+        </div>
+        <div class="plogo slot">
+          <img src="assets/logo-liqui-trimmed.png" alt="Liqui Moly">
+        </div>
+        <div class="plogo slot">
+          <img src="assets/logo-bmc-trimmed.png" alt="BMC Air Filters">
+        </div>
+        <div class="plogo slot">
+          <img src="assets/logo-mopar-trimmed.png" alt="Mopar">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= MARQUE TICKER ======================= -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker">
+      <div class="ticker-item">Lamborghini <span class="star">★</span> Aston Martin <span class="star">★</span> Porsche
+        <span class="star">★</span> BMW M <span class="star">★</span> Mercedes-AMG <span class="star">★</span> Audi
+        <span class="star">★</span> Range Rover <span class="star">★</span> Maserati <span class="star">★</span> Bentley
+        <span class="star">★</span>
+      </div>
+      <div class="ticker-item">Lamborghini <span class="star">★</span> Aston Martin <span class="star">★</span> Porsche
+        <span class="star">★</span> BMW M <span class="star">★</span> Mercedes-AMG <span class="star">★</span> Audi
+        <span class="star">★</span> Range Rover <span class="star">★</span> Maserati <span class="star">★</span> Bentley
+        <span class="star">★</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= SERVICES ======================= -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What we do</span>
+        <h2 class="display">Built for the<br>cars others won't touch</h2>
+        <p>From a scheduled service on a daily M3 to a full restoration of a Lamborghini Diablo, every car gets
+          specialist hands, the right parts, and a straight answer before any work begins.</p>
+      </div>
+
+      <div class="svc-grid reveal">
+        <!-- MEDIA SLOT · services feature video -->
+        <div class="svc-feature slot">
+          <video autoplay muted loop playsinline preload="none" class="svc-video">
+            <source src="assets/services-porsche-workshop.mp4" type="video/mp4">
+          </video>
+          <div class="ph">
+            <span class="pi">Services · Feature Video</span>
+            <span class="pf">assets/services-porsche-workshop.mp4</span>
+            <span class="pd">White Porsche Cayman on the lift in the clean, bright service bay (5/5 workshop shot).
+              Shows the environment and builds trust.</span>
+          </div>
+          <div class="cap">
+            <div class="k">Inside the workshop</div>
+            <h3>Dealer-level care,<br>specialist hands</h3>
+          </div>
+        </div>
+
+        <div class="svc-list">
+          <div class="svc-item">
+            <span class="svc-num">01</span>
+            <div>
+              <h3>Exotic &amp; Performance Service</h3>
+              <p>Manufacturer-schedule servicing for Lamborghini, Aston Martin, Porsche, BMW M and AMG, by people who
+                know these engines cold.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <span class="svc-num">02</span>
+            <div>
+              <h3>Diagnostics &amp; Repair</h3>
+              <p>Dealer-grade diagnostics to find the real fault first, then a precise repair with genuine parts and no
+                guesswork.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <span class="svc-num">03</span>
+            <div>
+              <h3>Performance Upgrades</h3>
+              <p>From BMC intakes to full Project Gamma builds, more power and sharper response, dialed in properly.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <span class="svc-num">04</span>
+            <div>
+              <h3>Customization &amp; Detailing</h3>
+              <p>Styling, wraps, wheels and concours-level detailing to match the car to the person who drives it.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <span class="svc-num">05</span>
+            <div>
+              <h3>Genuine Parts &amp; Filters</h3>
+              <p>Motul, Liqui Moly, Mopar and genuine BMC air filters, stocked, supplied and installed in-house.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= BMC ======================= -->
+  <!-- NOTE: distributor status NOT yet confirmed by client. Copy below uses safe "available at" language.
+     If they confirm official/authorized BMC distributor for Qatar, switch headline to
+     "Qatar's Official BMC Air Filter Distributor" and add the Parts 24 shop link + filter-finder. -->
+  <section class="section bmc" id="bmc">
+    <div class="wrap bmc-grid">
+      <div class="bmc-copy reveal">
+        <span class="eyebrow gold">Performance starts with air</span>
+        <h2>BMC Air Filters,<br><em>available at Q USA</em>
+          <span class="flag" title="Made in Italy"><i style="background:#009246"></i><i style="background:#fff"></i><i
+              style="background:#CE2B37"></i></span>
+        </h2>
+        <p class="bmc-lead">We stock and install genuine BMC air filters, the Italian-engineered performance filter
+          built for cars that demand more. Higher airflow than standard paper, and made for Qatar's conditions.</p>
+        <div class="bmc-feats">
+          <span>Multi-layer <b>oiled cotton</b></span>
+          <span>Filters to <b>7 microns</b></span>
+          <span><b>Washable</b>, reusable for life</span>
+          <span>Perfect <b>OEM fit</b></span>
+        </div>
+        <div class="bmc-models">
+          <div class="mh">Available for 20+ models</div>
+          <div class="chips">
+            <span class="chip">Lamborghini Urus</span>
+            <span class="chip">BMW M5</span>
+            <span class="chip">Range Rover</span>
+            <span class="chip">Jeep SRT</span>
+            <span class="chip">Ford F-150</span>
+            <span class="chip">Audi Q7 / Q8</span>
+            <span class="chip">Porsche Cayenne</span>
+            <span class="chip">Mustang GT</span>
+            <span class="chip more">and more →</span>
+          </div>
+        </div>
+        <a class="btn btn-red"
+          href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20order%20a%20BMC%20air%20filter%20for%20my%20car"
+          target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+          </svg>
+          WhatsApp to order
+        </a>
+        <div class="bmc-note">Delivery across Qatar <span class="star">★</span> Fitting available in Al Wukair</div>
+      </div>
+
+      <!-- MEDIA SLOT · BMC feature video -->
+      <div class="bmc-media slot reveal">
+        <video autoplay muted loop playsinline preload="none" class="bmc-video">
+          <source src="assets/bmc-air-filter.mp4" type="video/mp4">
+        </video>
+        <div class="ph">
+          <span class="pi">BMC · Feature Video</span>
+          <span class="pf">assets/bmc-air-filter.mp4</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= WORK / GALLERY ======================= -->
+  <section class="section work" id="work">
+    <div class="wrap">
+      <div class="work-head reveal">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="eyebrow">Our work</span>
+          <h2 class="display">Cars we've<br>looked after</h2>
+        </div>
+        <div class="work-nav">
+          <button id="railPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 18l-6-6 6-6" />
+            </svg></button>
+          <button id="railNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 6l6 6-6 6" />
+            </svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="rail reveal" id="rail">
+
+        <!-- VIDEO tile -->
+        <div class="rail-card">
+          <div class="rail-media slot">
+            <video muted loop playsinline preload="none" poster="assets/work-diablo-poster.jpg" class="rail-video">
+              <source src="assets/work-lambo-diablo.mp4" type="video/mp4">
+            </video>
+            <div class="ph">
+              <span class="pi">Gallery · Video</span>
+              <span class="pf">assets/work-lambo-diablo.mp4</span>
+              <span class="pd">1995 Lamborghini Diablo reel (their top post: 7.1K views). Use the video, not the low-res
+                still.</span>
+            </div>
+            <span class="rail-tag vid">▶ Reel</span>
+            <div class="rail-cap"><b>Lamborghini Diablo</b><span>1995 · V12 ICON</span></div>
+          </div>
+        </div>
+
+        <!-- WIDE case-study tile · video -->
+        <div class="rail-card wide">
+          <div class="rail-media slot">
+            <video muted loop playsinline preload="none" poster="assets/work-aston-restoration.jpg" class="rail-video">
+              <source src="assets/aston-martin-rapide.mp4" type="video/mp4">
+            </video>
+            <div class="ph">
+              <span class="pi">Gallery · Video (wide)</span>
+              <span class="pf">assets/aston-martin-rapide.mp4</span>
+            </div>
+            <span class="rail-tag vid">▶ Reel</span>
+            <div class="rail-cap"><b>Aston Martin Rapide</b><span>FULL RESTORATION</span></div>
+          </div>
+        </div>
+
+        <!-- image tile -->
+        <div class="rail-card">
+          <div class="rail-media slot">
+            <img src="assets/aventador.jpg" alt="Lamborghini Aventador">
+            <div class="ph">
+              <span class="pi">Gallery · Image</span>
+              <span class="pf">assets/aventador.jpg</span>
+            </div>
+            <span class="rail-tag">Exotic</span>
+            <div class="rail-cap"><b>Aventador SV</b><span>WORKSHOP</span></div>
+          </div>
+        </div>
+
+        <!-- video tile -->
+        <div class="rail-card">
+          <div class="rail-media slot">
+            <video muted loop playsinline preload="none" poster="assets/work-m3-poster.jpg" class="rail-video">
+              <source src="assets/work-bmw-m3-engine.mp4" type="video/mp4">
+            </video>
+            <div class="ph">
+              <span class="pi">Gallery · Video</span>
+              <span class="pf">assets/work-bmw-m3-engine.mp4</span>
+              <span class="pd">BMW M3 engine-bay work, Project Gamma parts (4/5). Great hands-on technical
+                detail.</span>
+            </div>
+            <span class="rail-tag vid">▶ Reel</span>
+            <div class="rail-cap"><b>BMW M3</b><span>PROJECT GAMMA</span></div>
+          </div>
+        </div>
+
+        <!-- image tile -->
+        <div class="rail-card">
+          <div class="rail-media slot">
+            <img src="assets/work-aston-restoration.jpg" alt="Aston Martin Rapide, finished and delivered">
+            <div class="ph">
+              <span class="pi">Gallery · Image</span>
+              <span class="pf">assets/work-aston-restoration.jpg</span>
+            </div>
+            <span class="rail-tag">Detail</span>
+            <div class="rail-cap"><b>Aston Martin Rapide</b><span>FINISHED &amp; DELIVERED</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ABOUT / TEAM ======================= -->
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <span class="eyebrow">Who we are</span>
+        <h2 class="display">Driven by<br>excellence</h2>
+        <p class="lead"><b>Every car that comes through our doors is treated like it's our own.</b> We are a team of
+          specialists who love these machines as much as the people who own them, and it shows in the work.</p>
+        <div class="ethos">
+          <div><b>Precision</b></div>
+          <div><b>Passion</b></div>
+          <div><b>Perfection</b></div>
+        </div>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg> Specialists in exotic, European and American marques</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg> Transparent pricing, agreed before any work starts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg> Genuine parts only, from partners we trust</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg> The same care for an M3 as for an Aventador</li>
+        </ul>
+      </div>
+
+      <div class="about-media">
+        <!-- MEDIA SLOT · team (Mark, thumbs up) -->
+        <div class="slot reveal">
+          <video muted loop playsinline preload="none" class="rail-video">
+            <source src="assets/mark-shot.mp4" type="video/mp4">
+          </video>
+          <div class="ph">
+            <span class="pi">About · Team</span>
+            <span class="pf">assets/mark-shot.mp4</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CONTACT ======================= -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2 class="display">Bring your<br>car in</h2>
+        <p class="lead">Message us on WhatsApp or call the workshop. Tell us the car and what it needs, and we'll take
+          it from there.</p>
+        <div class="cta-stack">
+          <a class="btn btn-red btn-lg"
+            href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
+            target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+            </svg>
+            Chat on WhatsApp
+          </a>
+          <a class="btn btn-ghost btn-lg" href="tel:+97466338775">Call +974 6633 8775</a>
+        </div>
+        <div class="cmeta">
+          <div class="row"><span class="k">Location</span><span class="v">Ezdan Oasis, Al Wukair, Qatar<br><a
+                href="https://www.google.com/maps/search/?api=1&amp;query=Q+USA+Auto+Shop+Al+Wukair+Qatar"
+                target="_blank" rel="noopener">Get directions →</a></span></div>
+          <div class="row"><span class="k">WhatsApp</span><span class="v"><a href="https://wa.me/97466338775"
+                target="_blank" rel="noopener">+974 6633 8775</a></span></div>
+          <div class="row"><span class="k">Instagram</span><span class="v"><a
+                href="https://www.instagram.com/qusa.autoshop" target="_blank" rel="noopener">@qusa.autoshop</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hours reveal">
+        <span class="eyebrow">Opening hours</span>
+        <div class="hrow closed"><span class="d">Monday</span><span class="t">Closed</span></div>
+        <div class="hrow"><span class="d">Tuesday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
+        <div class="hrow"><span class="d">Wednesday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
+        <div class="hrow"><span class="d">Thursday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
+        <div class="hrow"><span class="d">Friday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
+        <div class="hrow"><span class="d">Saturday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
+        <div class="hrow"><span class="d">Sunday</span><span class="t">9:00–12:00 · 15:00–22:00</span></div>
+        <!-- Optional: replace this hours card's sibling with a Google Maps <iframe> embed if you want a live map. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <span class="eyebrow">Q USA Auto Shop &amp; Trading</span>
+        <p class="lede">Home of exotic performance in Al Wukair, Qatar. Specialists in exotic, European and American
+          cars.</p>
+        <!-- MEDIA SLOT · footer logo -->
+        <div class="logo-slot slot">
+          <img src="assets/logo-trimmed.png" alt="Q USA Auto Shop &amp; Trading logo"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="ph" style="display:none"><span class="pf">assets/logo-trimmed.png</span></div>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Explore</h4>
+        <a href="#services">Services</a>
+        <a href="#bmc">BMC Filters</a>
+        <a href="#work">Our Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="fcol">
+        <h4>Contact</h4>
+        <a href="https://wa.me/97466338775" target="_blank" rel="noopener">WhatsApp to book</a>
+        <a href="tel:+97466338775">+974 6633 8775</a>
+        <a href="https://www.instagram.com/qusa.autoshop" target="_blank" rel="noopener">@qusa.autoshop</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Q+USA+Auto+Shop+Al+Wukair+Qatar" target="_blank"
+          rel="noopener">Directions</a>
+      </div>
+    </div>
+    <div class="wrap foot-bar">
+      <span>© 2026 Q USA Auto Shop &amp; Trading · Al Wukair, Qatar</span>
+      <span class="credit">Website by <b>FEMI WEB SERVICES</b> · Ibadan, Nigeria</span>
+    </div>
+  </footer>
+
+  <!-- sticky mobile whatsapp -->
+  <a class="wa-fab" href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
+    target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+    </svg>
+    Book on WhatsApp
+  </a>
+
+  <script>
+    // build the tach ticks (redline signature)
+    (function () {
+      var tach = document.querySelector('.tach'); if (!tach) return;
+      var n = 64;
+      for (var i = 0; i < n; i++) {
+        var t = document.createElement('div');
+        t.className = 'tick' + (i % 4 === 0 ? ' mid' : '');
+        if (i > n - 9) t.className += ' red';
+        if (i > n - 4) t.className += ' redb';
+        tach.appendChild(t);
+      }
+    })();
+
+    // nav solidify on scroll
+    var header = document.getElementById('site-header');
+    var onScroll = function () { header.classList.toggle('solid', window.scrollY > 40) };
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    // mobile menu
+    var toggle = document.getElementById('toggle'), menu = document.getElementById('menu');
+    toggle.addEventListener('click', function () { menu.classList.toggle('open'); toggle.classList.toggle('x') });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { menu.classList.remove('open'); toggle.classList.remove('x') }) });
+
+    // scroll reveal
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } })
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el) });
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+          if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in')
+        })
+      }, 1400)
+    });
+
+    // play gallery/hero videos only while in view
+    var vio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () { }) } else { v.pause() }
+      })
+    }, { threshold: .35 });
+    document.querySelectorAll('.rail-video').forEach(function (v) { vio.observe(v) });
+
+    // horizontal gallery: arrows + drag
+    var rail = document.getElementById('rail');
+    function card() { var c = rail.querySelector('.rail-card'); return c ? c.getBoundingClientRect().width + 20 : 400 }
+    document.getElementById('railNext').addEventListener('click', function () { rail.scrollBy({ left: card(), behavior: 'smooth' }) });
+    document.getElementById('railPrev').addEventListener('click', function () { rail.scrollBy({ left: -card(), behavior: 'smooth' }) });
+    (function () {
+      var down = false, startX, startL;
+      rail.addEventListener('pointerdown', function (e) { down = true; rail.classList.add('drag'); startX = e.pageX; startL = rail.scrollLeft; rail.setPointerCapture(e.pointerId) });
+      rail.addEventListener('pointermove', function (e) { if (!down) return; rail.scrollLeft = startL - (e.pageX - startX) });
+      var up = function () { down = false; rail.classList.remove('drag') };
+      rail.addEventListener('pointerup', up); rail.addEventListener('pointercancel', up); rail.addEventListener('pointerleave', up);
+    })();
+
+    // highlight today's hours row (skip closed Monday)
+    (function () {
+      var day = new Date().getDay(); // 0 Sun..6 Sat
+      var order = [1, 2, 3, 4, 5, 6, 0];   // rows Mon..Sun
+      var rows = document.querySelectorAll('.hours .hrow');
+      var idx = order.indexOf(day);
+      if (idx > -1 && rows[idx] && !rows[idx].classList.contains('closed')) rows[idx].classList.add('today');
+    })();
+  </script>
+</body>
+
+</html>
