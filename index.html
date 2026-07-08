@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q USA Auto Shop &amp; Trading — Quality Car Service &amp; Repair | Qatar</title>
+  <title>Q USA Auto Shop &amp; Trading: Quality Car Service &amp; Repair | Qatar</title>
   <meta name="description"
-    content="Q USA Auto Shop &amp; Trading, Al Wukair, Qatar. Quality car service, repair and diagnostics for all makes — daily, European, American, Japanese and performance cars — plus fleet maintenance. Official BMC Air Filter distributor in Qatar. Book on WhatsApp.">
+    content="Q USA Auto Shop &amp; Trading, Al Wukair, Qatar. Quality car service, repair and diagnostics for all makes, including daily, European, American, Japanese and performance cars, plus fleet maintenance. Official BMC Air Filter distributor in Qatar. Book on WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -465,41 +465,6 @@
       margin: 0 8px
     }
 
-    /* tach redline bar */
-    .tach {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 3;
-      height: 34px;
-      display: flex;
-      align-items: flex-end;
-      gap: 0;
-      padding: 0 28px;
-      pointer-events: none
-    }
-
-    .tach .tick {
-      flex: 1;
-      background: var(--line);
-      height: 9px;
-      transform-origin: bottom
-    }
-
-    .tach .tick.mid {
-      height: 15px
-    }
-
-    .tach .tick.red {
-      background: var(--red)
-    }
-
-    .tach .tick.redb {
-      background: var(--red-bright);
-      height: 22px
-    }
-
     .scroll-cue {
       position: absolute;
       right: 28px;
@@ -750,6 +715,21 @@
       font-size: 15px;
       margin-top: 6px;
       max-width: 52ch
+    }
+
+    .svc-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      color: var(--red-bright);
+      font-weight: 600;
+      font-size: 15px;
+      transition: gap .2s
+    }
+
+    .svc-more:hover {
+      gap: 12px
     }
 
     /* ---------- BMC section ---------- */
@@ -1512,7 +1492,7 @@
         </span>
       </a>
       <nav class="nav-links" id="menu">
-        <a href="#services">Services</a>
+        <a href="services.html">Our Services</a>
         <a href="#bmc">BMC Filters</a>
         <a href="#work">Our Work</a>
         <a href="#about">About</a>
@@ -1558,7 +1538,7 @@
         <h1 class="display">Quality service<br>for <span class="r">every car</span></h1>
         <div class="hero-sub">
           <p class="hero-lead"><b>A trusted workshop for daily drivers, family cars, European, American, Japanese and
-            performance vehicles — and fleets.</b> Honest service, repair, diagnostics and genuine parts at a fair,
+            performance vehicles, and fleets.</b> Honest service, repair, diagnostics and genuine parts at a fair,
             transparent price.</p>
           <span class="hero-kicker">Precision<span class="sep">/</span>Passion<span
               class="sep">/</span>Perfection</span>
@@ -1578,9 +1558,6 @@
       </div>
     </div>
 
-    <div class="tach" aria-hidden="true">
-      <!-- redline signature: tach ticks along the base of the hero -->
-    </div>
     <span class="scroll-cue">SCROLL</span>
   </section>
 
@@ -1664,21 +1641,36 @@
           <div class="svc-item">
             <span class="svc-num">01</span>
             <div>
-              <h3>Service &amp; Maintenance</h3>
-              <p>Routine servicing, oil changes and scheduled maintenance for all makes, from daily drivers to European,
-                American and Japanese cars.</p>
+              <h3>Mechanical Repairs</h3>
+              <p>Engine, transmission, suspension, steering, brake and cooling system work: the full mechanical side,
+                done right.</p>
             </div>
           </div>
           <div class="svc-item">
             <span class="svc-num">02</span>
             <div>
-              <h3>Diagnostics &amp; Repair</h3>
-              <p>Dealer-grade diagnostics to find the real fault first, then a precise repair with genuine parts and no
-                guesswork.</p>
+              <h3>Electrical &amp; Diagnostics</h3>
+              <p>Advanced computer diagnostics, ECU analysis, sensor and fault-code diagnosis, and electronic system
+                repair.</p>
             </div>
           </div>
           <div class="svc-item">
             <span class="svc-num">03</span>
+            <div>
+              <h3>Maintenance Services</h3>
+              <p>Minor and major service, oil &amp; filter changes, multi-point inspections and preventive maintenance
+                for all makes.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <span class="svc-num">04</span>
+            <div>
+              <h3>Air Conditioning Services</h3>
+              <p>AC diagnostics, repair, performance testing and refrigerant service, built for Qatar's climate.</p>
+            </div>
+          </div>
+          <div class="svc-item">
+            <span class="svc-num">05</span>
             <div>
               <h3>Exotic &amp; Performance Service</h3>
               <p>Specialist servicing for Lamborghini, Aston Martin, Porsche, BMW M and AMG, by people who know these
@@ -1686,25 +1678,11 @@
             </div>
           </div>
           <div class="svc-item">
-            <span class="svc-num">04</span>
-            <div>
-              <h3>Genuine Parts &amp; Filters</h3>
-              <p>Motul, Liqui Moly, Bosch, Amaron, Veedol, Ford Motorcraft and genuine BMC air filters, stocked,
-                supplied and installed in-house.</p>
-            </div>
-          </div>
-          <div class="svc-item">
-            <span class="svc-num">05</span>
-            <div>
-              <h3>Performance Upgrades</h3>
-              <p>From BMC intakes to bigger builds, more power and sharper response, dialed in properly.</p>
-            </div>
-          </div>
-          <div class="svc-item">
             <span class="svc-num">06</span>
             <div>
-              <h3>Customization &amp; Detailing</h3>
-              <p>Styling, wraps, wheels and detailing to match the car to the person who drives it.</p>
+              <h3>Performance Solutions</h3>
+              <p>Performance air filters, suspension and intake upgrades, off-road builds and performance component
+                installation.</p>
             </div>
           </div>
           <div class="svc-item">
@@ -1715,6 +1693,7 @@
                 commercial and institutional fleets, with pickup and delivery.</p>
             </div>
           </div>
+          <a class="svc-more" href="services.html">See all our services →</a>
         </div>
       </div>
     </div>
@@ -2000,7 +1979,7 @@
       </div>
       <div class="fcol">
         <h4>Explore</h4>
-        <a href="#services">Services</a>
+        <a href="services.html">Our Services</a>
         <a href="#bmc">BMC Filters</a>
         <a href="#work">Our Work</a>
         <a href="#about">About</a>
@@ -2034,19 +2013,6 @@
   </a>
 
   <script>
-    // build the tach ticks (redline signature)
-    (function () {
-      var tach = document.querySelector('.tach'); if (!tach) return;
-      var n = 64;
-      for (var i = 0; i < n; i++) {
-        var t = document.createElement('div');
-        t.className = 'tick' + (i % 4 === 0 ? ' mid' : '');
-        if (i > n - 9) t.className += ' red';
-        if (i > n - 4) t.className += ' redb';
-        tach.appendChild(t);
-      }
-    })();
-
     // nav solidify on scroll
     var header = document.getElementById('site-header');
     var onScroll = function () { header.classList.toggle('solid', window.scrollY > 40) };
