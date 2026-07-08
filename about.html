@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services: Q USA Auto Shop &amp; Trading | Qatar</title>
+  <title>About Us: Q USA Auto Shop &amp; Trading | Qatar</title>
   <meta name="description"
-    content="Service &amp; repair, diagnostics, exotic &amp; performance work, genuine parts and fleet maintenance at Q USA Auto Shop &amp; Trading, Al Wukair, Qatar. See why customers choose us, meet the team, and our health, safety and quality commitment.">
+    content="Q USA Auto Shop &amp; Trading: founded 2023 in Al Wukair, Doha. Our mission, vision, core values, facility, diagnostic technology and vehicle expertise, serving European, American, Japanese, luxury, performance and off-road vehicles.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -356,7 +356,7 @@
 
     .sec-head {
       max-width: 720px;
-      margin-bottom: 56px
+      margin-bottom: 40px
     }
 
     .sec-head h2 {
@@ -372,52 +372,40 @@
       max-width: 56ch
     }
 
-    /* ---------- core services ---------- */
-    .svc-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 13px;
-      color: var(--red);
-      font-weight: 700
-    }
-
-    .svc-cats {
+    /* ---------- prose (multi-paragraph copy) ---------- */
+    .prose {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px
+      gap: 16px;
+      max-width: 680px
     }
 
-    .svc-cat {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 3px;
-      padding: 30px 28px;
-      transition: border-color .2s
+    .prose p {
+      color: #CBCBCB;
+      font-size: 16px
     }
 
-    .svc-cat:hover {
-      border-color: var(--red-bright)
+    /* ---------- mission & vision ---------- */
+    .mv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px
     }
 
-    .svc-cat.wide {
-      grid-column: 1 / -1
-    }
-
-    .svc-cat-head {
-      display: flex;
-      align-items: baseline;
-      gap: 14px;
-      margin-bottom: 18px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--line)
-    }
-
-    .svc-cat-head h3 {
-      font-size: 21px;
-      font-weight: 700;
+    .mv-col h2 {
+      font-size: clamp(28px, 3.6vw, 40px);
       color: #fff;
-      letter-spacing: -.01em
+      margin: 18px 0 16px;
+      line-height: 1.05
     }
 
+    .mv-col p {
+      color: #CBCBCB;
+      font-size: 16px;
+      max-width: 46ch;
+      margin-bottom: 18px
+    }
+
+    /* ---------- bullet list (dash marker) ---------- */
     .svc-sub {
       list-style: none;
       display: grid;
@@ -442,7 +430,7 @@
     .svc-note {
       color: var(--muted);
       font-size: 14.5px;
-      margin-top: 32px;
+      margin-top: 24px;
       max-width: 70ch
     }
 
@@ -450,7 +438,24 @@
       color: var(--red-bright)
     }
 
-    /* ---------- fleet maintenance ---------- */
+    /* ---------- chips ---------- */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 24px 0 0
+    }
+
+    .chip {
+      font-size: 13px;
+      color: #E4E4E4;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 7px 12px
+    }
+
+    /* ---------- fleet-style gradient section (reused for Performance & Off-Road) ---------- */
     .fleet {
       background: linear-gradient(135deg, #1E1412 0%, #1A1A1A 55%, #141414 100%);
       position: relative;
@@ -483,85 +488,8 @@
       max-width: 54ch
     }
 
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .fleet-inner .chips {
       margin: 24px 0 28px
-    }
-
-    .chip {
-      font-size: 13px;
-      color: #E4E4E4;
-      background: var(--surface-2);
-      border: 1px solid var(--line);
-      border-radius: 2px;
-      padding: 7px 12px
-    }
-
-    /* ---------- why choose us ---------- */
-    .checks {
-      list-style: none;
-      display: grid;
-      gap: 14px
-    }
-
-    .checks li {
-      display: flex;
-      gap: 13px;
-      align-items: flex-start;
-      font-weight: 500;
-      color: #E4E4E4
-    }
-
-    .checks svg {
-      width: 22px;
-      height: 22px;
-      flex: none;
-      margin-top: 1px
-    }
-
-    .why-grid {
-      grid-template-columns: 1fr 1fr;
-      column-gap: 40px
-    }
-
-    /* ---------- team & expertise ---------- */
-    .ethos {
-      display: flex;
-      gap: 0;
-      border: 1px solid var(--line);
-      max-width: 720px
-    }
-
-    .ethos div {
-      flex: 1;
-      padding: 22px 16px;
-      text-align: center;
-      border-left: 1px solid var(--line)
-    }
-
-    .ethos div:first-child {
-      border-left: none
-    }
-
-    .ethos b {
-      font-family: 'Anton', sans-serif;
-      text-transform: uppercase;
-      font-size: 32px;
-      color: var(--red-bright);
-      letter-spacing: .02em;
-      line-height: 1
-    }
-
-    .ethos span {
-      display: block;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 8px
     }
 
     /* ---------- cta banner ---------- */
@@ -697,6 +625,11 @@
 
     /* ---------- responsive ---------- */
     @media(max-width:1000px) {
+      .mv-grid {
+        grid-template-columns: 1fr;
+        gap: 36px
+      }
+
       .foot {
         grid-template-columns: 1fr 1fr
       }
@@ -744,22 +677,6 @@
         display: block
       }
 
-      .svc-cats {
-        grid-template-columns: 1fr
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr
-      }
-
-      .ethos {
-        flex-wrap: wrap
-      }
-
-      .ethos div {
-        min-width: 45%
-      }
-
       .foot {
         grid-template-columns: 1fr
       }
@@ -784,8 +701,7 @@
         transition: none
       }
 
-      .btn,
-      .svc-cat {
+      .btn {
         transition: none
       }
     }
@@ -805,10 +721,10 @@
         </span>
       </a>
       <nav class="nav-links" id="menu">
-        <a href="services.html" class="current" aria-current="page">Our Services</a>
+        <a href="services.html">Our Services</a>
         <a href="index.html#bmc">BMC Filters</a>
         <a href="index.html#work">Our Work</a>
-        <a href="about.html">About</a>
+        <a href="about.html" class="current" aria-current="page">About</a>
         <a href="contact.html">Contact</a>
         <a class="btn btn-red"
           href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service" target="_blank"
@@ -829,10 +745,10 @@
   <!-- ======================= PAGE HERO ======================= -->
   <section class="page-hero">
     <div class="wrap">
-      <span class="eyebrow">What we do</span>
-      <h1 class="display">Our <span class="r">Services</span></h1>
-      <p>Everything your car needs, under one roof: routine service and diagnostics, exotic and performance work,
-        genuine parts, and fleet maintenance for businesses, all handled by the same specialist team.</p>
+      <span class="eyebrow">Who we are</span>
+      <h1 class="display">About <span class="r">Q USA</span></h1>
+      <p>QUSA Auto Shop &amp; Trading is a premium automotive service and maintenance facility, driven by quality and
+        powered by expertise.</p>
       <div class="cta-stack">
         <a class="btn btn-red btn-lg"
           href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
@@ -843,233 +759,164 @@
           </svg>
           Book on WhatsApp
         </a>
-        <a class="btn btn-ghost btn-lg" href="contact.html">Contact us</a>
+        <a class="btn btn-ghost btn-lg" href="services.html">Our services</a>
       </div>
     </div>
   </section>
 
-  <!-- ======================= CORE SERVICES ======================= -->
-  <section class="section" id="core">
+  <!-- ======================= COMPANY OVERVIEW ======================= -->
+  <section class="section" id="overview">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Core services</span>
-        <h2 class="display">Everything your car<br>needs, under one roof</h2>
-        <p>From a routine oil service on your daily car to complex mechanical, electrical and air conditioning work,
-          every vehicle gets specialist hands, the right equipment, and a straight, fair answer before any work
-          begins.</p>
+        <span class="eyebrow">Company overview</span>
+        <h2 class="display">Driven by quality,<br>powered by expertise</h2>
+        <p>QUSA Auto Shop &amp; Trading is a premium automotive service and maintenance facility, established in 2023
+          and located in Al Wukair, Doha, Qatar.</p>
       </div>
-
-      <div class="svc-cats reveal">
-        <div class="svc-cat">
-          <div class="svc-cat-head">
-            <span class="svc-num">01</span>
-            <h3>Mechanical Repairs</h3>
-          </div>
-          <ul class="svc-sub">
-            <li>Engine Diagnostics &amp; Repair</li>
-            <li>Engine Overhauls &amp; Rebuilds</li>
-            <li>Transmission Repair &amp; Service</li>
-            <li>Suspension Repair</li>
-            <li>Steering System Repair</li>
-            <li>Brake System Service</li>
-            <li>Cooling System Repair</li>
-            <li>General Mechanical Maintenance</li>
-          </ul>
-        </div>
-        <div class="svc-cat">
-          <div class="svc-cat-head">
-            <span class="svc-num">02</span>
-            <h3>Electrical &amp; Diagnostics</h3>
-          </div>
-          <ul class="svc-sub">
-            <li>Advanced Computer Diagnostics</li>
-            <li>Electrical Troubleshooting</li>
-            <li>Sensor Diagnostics</li>
-            <li>ECU Analysis</li>
-            <li>Battery &amp; Charging System Testing</li>
-            <li>Fault Code Diagnosis</li>
-            <li>Electronic System Repair</li>
-          </ul>
-        </div>
-        <div class="svc-cat">
-          <div class="svc-cat-head">
-            <span class="svc-num">03</span>
-            <h3>Maintenance Services</h3>
-          </div>
-          <ul class="svc-sub">
-            <li>Minor Service</li>
-            <li>Major Service</li>
-            <li>Oil &amp; Filter Service</li>
-            <li>Multi-Point Inspection</li>
-            <li>Preventive Maintenance</li>
-            <li>Vehicle Health Checks</li>
-          </ul>
-        </div>
-        <div class="svc-cat">
-          <div class="svc-cat-head">
-            <span class="svc-num">04</span>
-            <h3>Air Conditioning Services</h3>
-          </div>
-          <ul class="svc-sub">
-            <li>AC Diagnostics</li>
-            <li>AC Repair</li>
-            <li>AC Performance Testing</li>
-            <li>Refrigerant Service</li>
-          </ul>
-        </div>
-        <div class="svc-cat wide">
-          <div class="svc-cat-head">
-            <span class="svc-num">05</span>
-            <h3>Performance Solutions</h3>
-          </div>
-          <div class="chips">
-            <span class="chip">Performance Air Filters</span>
-            <span class="chip">Suspension Upgrades</span>
-            <span class="chip">Intake System Upgrades</span>
-            <span class="chip">Off-Road Upgrades</span>
-            <span class="chip">Performance Component Installation</span>
-          </div>
-        </div>
+      <div class="prose reveal">
+        <p>Founded by Mohammed Abdul Azeez and Nimal Wijerathna, QUSA was established to address the growing demand
+          for quality workmanship, transparency, availability and trustworthy automotive service within the local
+          market.</p>
+        <p>With over 20 years of combined industry experience, our management team has built QUSA around technical
+          excellence, customer satisfaction and long-term relationships.</p>
+        <p>Today, QUSA provides comprehensive automotive solutions for European, American, Japanese, luxury,
+          performance and off-road vehicles, through a modern workshop equipped with advanced diagnostic technology
+          and highly skilled technicians.</p>
       </div>
-
-      <p class="svc-note reveal">Every job uses genuine, OEM and aftermarket parts from trusted partners including
-        Motul, Liqui Moly, Bosch and more: <a href="index.html#bmc">see our parts partners</a>. Servicing businesses?
-        See our <a href="#fleet">fleet maintenance programs</a> below.</p>
     </div>
   </section>
 
-  <!-- ======================= FLEET MAINTENANCE ======================= -->
-  <section class="section fleet" id="fleet">
+  <!-- ======================= MISSION & VISION ======================= -->
+  <section class="section tone-deep" id="mission-vision">
+    <div class="wrap mv-grid">
+      <div class="mv-col reveal">
+        <span class="eyebrow">Mission</span>
+        <h2 class="display">Complete solutions,<br>under one roof</h2>
+        <p>To provide complete automotive solutions under one roof, while delivering exceptional quality,
+          transparency, reliability and long-term value to every customer.</p>
+      </div>
+      <div class="mv-col reveal">
+        <span class="eyebrow">Vision</span>
+        <h2 class="display">Qatar's most<br>trusted workshop</h2>
+        <p>To become one of Qatar's most trusted and technologically advanced automotive service providers, by
+          creating a fully integrated customer experience from booking to vehicle delivery. Our long-term vision
+          includes:</p>
+        <ul class="svc-sub">
+          <li>Online Booking Systems</li>
+          <li>Vehicle Pickup and Delivery Services</li>
+          <li>Digital Inspections and Reports</li>
+          <li>Real-Time Repair Progress Updates</li>
+          <li>Complete Service Transparency</li>
+          <li>Enhanced Customer Convenience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= OUR CORE VALUES ======================= -->
+  <section class="section" id="values">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Our core values</span>
+        <h2 class="display">What we<br>stand for</h2>
+      </div>
+      <div class="chips reveal">
+        <span class="chip">Integrity</span>
+        <span class="chip">Transparency</span>
+        <span class="chip">Quality Workmanship</span>
+        <span class="chip">Professionalism</span>
+        <span class="chip">Innovation</span>
+        <span class="chip">Customer Satisfaction</span>
+        <span class="chip">Continuous Improvement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FACILITY & CAPABILITIES ======================= -->
+  <section class="section tone-deep" id="facility">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Facility &amp; capabilities</span>
+        <h2 class="display">Built for<br>efficient work</h2>
+        <p>QUSA operates from a modern automotive service facility designed to deliver efficient and reliable
+          vehicle maintenance and repair services, with the capacity to handle up to 11 vehicles simultaneously
+          across 8 service bays and lifts.</p>
+      </div>
+      <ul class="svc-sub reveal">
+        <li>8 Service Bays &amp; Vehicle Lifts</li>
+        <li>Capacity to Handle Multiple Vehicles Simultaneously</li>
+        <li>Advanced Diagnostic Equipment</li>
+        <li>Professional Workshop Environment</li>
+        <li>Customer Waiting Area</li>
+        <li>Live Workshop Monitoring System</li>
+        <li>Vehicle Pickup &amp; Delivery Service</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================= ADVANCED DIAGNOSTIC TECHNOLOGY ======================= -->
+  <section class="section" id="diagnostics">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Advanced diagnostic technology</span>
+        <h2 class="display">Precision-level<br>equipment</h2>
+        <p>QUSA utilizes modern diagnostic technology to accurately identify and repair complex automotive issues.</p>
+      </div>
+      <div class="chips reveal">
+        <span class="chip">Launch Diagnostic Systems</span>
+        <span class="chip">Autel Diagnostic Systems</span>
+        <span class="chip">Advanced Electronic Testing Equipment</span>
+        <span class="chip">Battery Testing Systems</span>
+        <span class="chip">Air Conditioning Service Equipment</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= VEHICLE EXPERTISE ======================= -->
+  <section class="section tone-deep" id="expertise">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Vehicle expertise</span>
+        <h2 class="display">Every kind<br>of vehicle</h2>
+        <p>QUSA specializes in servicing a wide range of vehicle brands and categories.</p>
+      </div>
+      <div class="chips reveal">
+        <span class="chip">European Vehicles</span>
+        <span class="chip">American Vehicles</span>
+        <span class="chip">Japanese Vehicles</span>
+        <span class="chip">Luxury Vehicles</span>
+        <span class="chip">Performance Vehicles</span>
+        <span class="chip">SUV &amp; Off-Road Vehicles</span>
+      </div>
+      <p class="svc-note reveal">Our workshop has experience working on premium brands including BMW, Mercedes-Benz,
+        Audi, Porsche, Volkswagen, Land Rover, Lamborghini, Aston Martin, Toyota, Nissan, Lexus, Ford, Chevrolet and
+        many more.</p>
+    </div>
+  </section>
+
+  <!-- ======================= PERFORMANCE & OFF-ROAD DIVISION ======================= -->
+  <section class="section fleet" id="performance-offroad">
     <div class="wrap">
       <div class="fleet-inner reveal">
-        <span class="eyebrow gold">For businesses</span>
-        <h2>Fleet Maintenance<br>Solutions</h2>
-        <p>QUSA provides professional fleet maintenance programs for corporate, commercial and institutional customers,
-          keeping your vehicles on the road, not in the workshop.</p>
+        <span class="eyebrow gold">Performance &amp; off-road division</span>
+        <h2>Built for more<br>than the daily drive</h2>
+        <p>QUSA provides performance and off-road solutions designed to improve reliability, capability and driving
+          experience.</p>
         <div class="chips">
-          <span class="chip">Scheduled Maintenance</span>
-          <span class="chip">Preventive Maintenance Programs</span>
-          <span class="chip">Diagnostics &amp; Repairs</span>
-          <span class="chip">Vehicle Health Reporting</span>
-          <span class="chip">Priority Service Support</span>
-          <span class="chip">Fleet Inspection Services</span>
-          <span class="chip">Pickup &amp; Delivery Solutions</span>
+          <span class="chip">Performance Air Filtration Systems</span>
+          <span class="chip">Suspension Upgrades</span>
+          <span class="chip">Off-Road Suspension Systems</span>
+          <span class="chip">Intake Upgrades</span>
+          <span class="chip">Vehicle Enhancement Solutions</span>
         </div>
-        <a class="btn btn-red"
-          href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20ask%20about%20fleet%20maintenance%20for%20my%20business"
-          target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+        <a class="btn btn-red" href="services.html#core">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-          Ask about fleet maintenance
+          See performance solutions
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- ======================= WHY CHOOSE US ======================= -->
-  <section class="section tone-deep" id="why">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Why choose us</span>
-        <h2 class="display">Why work with<br>Q USA</h2>
-      </div>
-      <ul class="checks why-grid reveal">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Experienced Technical Team</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Advanced Diagnostic Equipment</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Modern Workshop Facility</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Transparent Service Process</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Live Workshop Monitoring</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Premium Products &amp; Components</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Pickup &amp; Delivery Service</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Fleet Maintenance Capability</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Genuine, OEM &amp; Aftermarket Solutions</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Customer-Focused Approach</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ======================= TEAM & EXPERTISE ======================= -->
-  <section class="section" id="team">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Team &amp; expertise</span>
-        <h2 class="display">The people<br>behind the work</h2>
-        <p>Our success is driven by a team of skilled automotive professionals committed to delivering exceptional
-          service. Our technicians carry extensive experience in the European automotive and performance vehicle
-          industry, and continuously build on it to keep pace with modern vehicle technology.</p>
-      </div>
-      <div class="ethos reveal">
-        <div><b>12</b><span>Technicians</span></div>
-        <div><b>4</b><span>Service Advisors</span></div>
-        <div><b>8</b><span>Service Bays</span></div>
-        <div><b>20+</b><span>Yrs Mgmt. Experience</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= HEALTH, SAFETY & QUALITY ======================= -->
-  <section class="section tone-deep" id="quality">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Health, safety &amp; quality</span>
-        <h2 class="display">Our<br>commitment</h2>
-        <p>QUSA is committed to maintaining a safe working environment while delivering consistent quality standards
-          across every service.</p>
-      </div>
-      <ul class="checks reveal">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Safe Workshop Practices</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Quality Control Procedures</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Professional Workmanship</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Customer Transparency</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="#FF3A3A" stroke-width="2.4" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 6L9 17l-5-5" />
-          </svg> Continuous Staff Development</li>
-      </ul>
     </div>
   </section>
 
