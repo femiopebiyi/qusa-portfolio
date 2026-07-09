@@ -340,6 +340,29 @@
       margin-top: 28px
     }
 
+    /* ---------- two-column media pairing (photo + copy) ---------- */
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center
+    }
+
+    .media-photo {
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      aspect-ratio: 3/4
+    }
+
+    .media-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
     .no-pt {
       padding-top: 0
     }
@@ -357,6 +380,14 @@
     .sec-head {
       max-width: 720px;
       margin-bottom: 56px
+    }
+
+    .sec-head.tight {
+      margin-bottom: 0
+    }
+
+    .svc-cats.spaced {
+      margin-top: 56px
     }
 
     .sec-head h2 {
@@ -534,6 +565,10 @@
       max-width: 720px
     }
 
+    .ethos.spaced {
+      margin-top: 32px
+    }
+
     .ethos div {
       flex: 1;
       padding: 22px 16px;
@@ -697,6 +732,17 @@
 
     /* ---------- responsive ---------- */
     @media(max-width:1000px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+        gap: 32px
+      }
+
+      .media-photo {
+        aspect-ratio: 16/10;
+        max-width: 480px;
+        margin: 0 auto
+      }
+
       .foot {
         grid-template-columns: 1fr 1fr
       }
@@ -828,22 +874,27 @@
 
   <!-- ======================= PAGE HERO ======================= -->
   <section class="page-hero">
-    <div class="wrap">
-      <span class="eyebrow">What we do</span>
-      <h1 class="display">Our <span class="r">Services</span></h1>
-      <p>Everything your car needs, under one roof: routine service and diagnostics, exotic and performance work,
-        genuine parts, and fleet maintenance for businesses, all handled by the same specialist team.</p>
-      <div class="cta-stack">
-        <a class="btn btn-red btn-lg"
-          href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
-          target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
-          </svg>
-          Book on WhatsApp
-        </a>
-        <a class="btn btn-ghost btn-lg" href="contact.html">Contact us</a>
+    <div class="wrap media-grid">
+      <div class="reveal">
+        <span class="eyebrow">What we do</span>
+        <h1 class="display">Our <span class="r">Services</span></h1>
+        <p>Everything your car needs, under one roof: routine service and diagnostics, exotic and performance work,
+          genuine parts, and fleet maintenance for businesses, all handled by the same specialist team.</p>
+        <div class="cta-stack">
+          <a class="btn btn-red btn-lg"
+            href="https://wa.me/97466338775?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
+            target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+            </svg>
+            Book on WhatsApp
+          </a>
+          <a class="btn btn-ghost btn-lg" href="contact.html">Contact us</a>
+        </div>
+      </div>
+      <div class="media-photo reveal">
+        <img src="assets/front_of_workshop.jpg" alt="Q USA Auto Shop &amp; Trading storefront in Al Wukair, Qatar">
       </div>
     </div>
   </section>
@@ -851,15 +902,20 @@
   <!-- ======================= CORE SERVICES ======================= -->
   <section class="section" id="core">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Core services</span>
-        <h2 class="display">Everything your car<br>needs, under one roof</h2>
-        <p>From a routine oil service on your daily car to complex mechanical, electrical and air conditioning work,
-          every vehicle gets specialist hands, the right equipment, and a straight, fair answer before any work
-          begins.</p>
+      <div class="media-grid reveal">
+        <div class="sec-head tight">
+          <span class="eyebrow">Core services</span>
+          <h2 class="display">Everything your car<br>needs, under one roof</h2>
+          <p>From a routine oil service on your daily car to complex mechanical, electrical and air conditioning
+            work, every vehicle gets specialist hands, the right equipment, and a straight, fair answer before any
+            work begins.</p>
+        </div>
+        <div class="media-photo">
+          <img src="assets/workshop4.jpg" alt="Technician running computer diagnostics on an Audi S3">
+        </div>
       </div>
 
-      <div class="svc-cats reveal">
+      <div class="svc-cats reveal spaced">
         <div class="svc-cat">
           <div class="svc-cat-head">
             <span class="svc-num">01</span>
@@ -940,7 +996,7 @@
 
   <!-- ======================= FLEET MAINTENANCE ======================= -->
   <section class="section fleet" id="fleet">
-    <div class="wrap">
+    <div class="wrap media-grid">
       <div class="fleet-inner reveal">
         <span class="eyebrow gold">For businesses</span>
         <h2>Fleet Maintenance<br>Solutions</h2>
@@ -964,6 +1020,9 @@
           </svg>
           Ask about fleet maintenance
         </a>
+      </div>
+      <div class="media-photo reveal">
+        <img src="assets/workshop2.jpg" alt="Vehicle in the workshop bay with genuine oils and parts on the shelf">
       </div>
     </div>
   </section>
@@ -1022,19 +1081,24 @@
 
   <!-- ======================= TEAM & EXPERTISE ======================= -->
   <section class="section" id="team">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Team &amp; expertise</span>
-        <h2 class="display">The people<br>behind the work</h2>
-        <p>Our success is driven by a team of skilled automotive professionals committed to delivering exceptional
-          service. Our technicians carry extensive experience in the European automotive and performance vehicle
-          industry, and continuously build on it to keep pace with modern vehicle technology.</p>
+    <div class="wrap media-grid">
+      <div class="reveal">
+        <div class="sec-head tight">
+          <span class="eyebrow">Team &amp; expertise</span>
+          <h2 class="display">The people<br>behind the work</h2>
+          <p>Our success is driven by a team of skilled automotive professionals committed to delivering exceptional
+            service. Our technicians carry extensive experience in the European automotive and performance vehicle
+            industry, and continuously build on it to keep pace with modern vehicle technology.</p>
+        </div>
+        <div class="ethos spaced">
+          <div><b>12</b><span>Technicians</span></div>
+          <div><b>4</b><span>Service Advisors</span></div>
+          <div><b>8</b><span>Service Bays</span></div>
+          <div><b>20+</b><span>Yrs Mgmt. Experience</span></div>
+        </div>
       </div>
-      <div class="ethos reveal">
-        <div><b>12</b><span>Technicians</span></div>
-        <div><b>4</b><span>Service Advisors</span></div>
-        <div><b>8</b><span>Service Bays</span></div>
-        <div><b>20+</b><span>Yrs Mgmt. Experience</span></div>
+      <div class="media-photo reveal">
+        <img src="assets/workshop1.jpg" alt="Technician checking engine oil during a service">
       </div>
     </div>
   </section>
