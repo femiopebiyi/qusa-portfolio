@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us: Q USA Auto Shop &amp; Trading | Qatar</title>
+  <title>Gallery: Q USA Auto Shop &amp; Trading | Qatar</title>
   <meta name="description"
-    content="Get in touch with Q USA Auto Shop &amp; Trading in Al Wukair, Qatar. WhatsApp, call, email or visit the workshop. Opening hours, location and directions.">
+    content="A look inside Q USA Auto Shop &amp; Trading, Al Wukair, Qatar. Fleet and vehicles we've looked after, plus engine work from full rebuilds to hands-on repair.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -328,54 +328,16 @@
       max-width: 58ch
     }
 
+    .page-hero .cta-stack {
+      margin-top: 28px
+    }
+
     .no-pt {
       padding-top: 0
     }
 
-    /* ---------- contact methods ---------- */
-    .contact-methods {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 40px
-    }
-
-    .cmethod {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 3px;
-      padding: 22px;
-      transition: border-color .2s, transform .2s
-    }
-
-    .cmethod:hover {
-      border-color: var(--red-bright);
-      transform: translateY(-3px)
-    }
-
-    .cmethod svg {
-      width: 24px;
-      height: 24px;
-      color: var(--red-bright);
-      margin-bottom: 16px
-    }
-
-    .cmethod .lbl {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--muted-2);
-      display: block;
-      margin-bottom: 6px
-    }
-
-    .cmethod .val {
-      color: #fff;
-      font-weight: 600;
-      font-size: 15px;
-      line-height: 1.4;
-      display: block
+    .tone-deep {
+      background: var(--bg-deep)
     }
 
     /* ---------- section base ---------- */
@@ -384,152 +346,90 @@
       position: relative
     }
 
-    /* ---------- contact ---------- */
-    .contact {
-      background: var(--bg-deep)
+    .sec-head {
+      max-width: 720px;
+      margin-bottom: 48px
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 56px
-    }
-
-    .contact h2 {
-      font-size: clamp(34px, 5vw, 64px);
+    .sec-head h2 {
+      font-size: clamp(34px, 5.4vw, 68px);
       color: #fff;
-      margin: 18px 0 22px;
-      line-height: .98
+      margin-top: 18px
     }
 
-    .contact .lead {
-      color: #CBCBCB;
-      font-size: 17px;
-      max-width: 46ch;
-      margin-bottom: 28px
-    }
-
-    /* ---------- contact form ---------- */
-    .cform {
-      display: grid;
-      gap: 18px
-    }
-
-    .cform .frow {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px
-    }
-
-    .cform label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--muted-2);
-      margin-bottom: 8px;
-      display: block
-    }
-
-    .cform input,
-    .cform textarea {
-      width: 100%;
-      background: var(--surface);
-      border: 1px solid var(--line-strong);
-      border-radius: 2px;
-      padding: 13px 14px;
-      color: #fff;
-      font-family: 'Inter Tight', system-ui, sans-serif;
-      font-size: 15px;
-      transition: border-color .2s
-    }
-
-    .cform input::placeholder,
-    .cform textarea::placeholder {
-      color: var(--muted-2)
-    }
-
-    .cform input:focus,
-    .cform textarea:focus {
-      outline: none;
-      border-color: var(--red-bright)
-    }
-
-    .cform textarea {
-      resize: vertical;
-      min-height: 130px
-    }
-
-    .cform .alt {
-      font-size: 14px;
+    .sec-head p {
       color: var(--muted);
-      margin-top: -4px
+      font-size: 17px;
+      margin-top: 20px;
+      max-width: 56ch
     }
 
-    .cform .alt a {
-      color: var(--red-bright)
+    /* ---------- gallery grid ---------- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
     }
 
-    .hours {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 3px;
-      padding: 30px 28px
-    }
-
-    .hours .eyebrow {
-      margin-bottom: 20px
-    }
-
-    .hrow {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--line);
-      font-size: 15px
-    }
-
-    .hrow:last-child {
-      border-bottom: none
-    }
-
-    .hrow .d {
-      color: #DADADA;
-      font-weight: 500
-    }
-
-    .hrow .t {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12.5px;
-      color: var(--muted)
-    }
-
-    .hrow.today {
-      margin: 0 -28px;
-      padding-left: 28px;
-      padding-right: 28px;
-      background: rgba(204, 0, 0, .08);
-      border-left: 3px solid var(--red)
-    }
-
-    .hrow.today .d {
-      color: #fff
-    }
-
-    /* ---------- map ---------- */
-    .map-wrap {
+    .gallery-item {
+      position: relative;
       border-radius: 3px;
       overflow: hidden;
       border: 1px solid var(--line);
-      filter: grayscale(.35) contrast(1.05);
+      aspect-ratio: 3/4
     }
 
-    .map-wrap iframe {
-      display: block;
+    .gallery-item img {
       width: 100%;
-      height: 420px;
-      border: 0
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s var(--ease)
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05)
+    }
+
+    .gallery-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(204, 0, 0, .9);
+      padding: 5px 10px;
+      border-radius: 2px
+    }
+
+    /* ---------- cta banner ---------- */
+    .cta-banner {
+      text-align: center
+    }
+
+    .cta-banner .eyebrow {
+      justify-content: center
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(34px, 5vw, 64px);
+      color: #fff;
+      margin: 18px 0 30px;
+      line-height: .98
+    }
+
+    .cta-stack {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap
+    }
+
+    .cta-stack.center {
+      justify-content: center
     }
 
     /* ---------- footer ---------- */
@@ -639,12 +539,7 @@
 
     /* ---------- responsive ---------- */
     @media(max-width:1000px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 36px
-      }
-
-      .contact-methods {
+      .gallery-grid {
         grid-template-columns: repeat(2, 1fr)
       }
 
@@ -695,11 +590,7 @@
         display: block
       }
 
-      .contact-methods {
-        grid-template-columns: 1fr
-      }
-
-      .cform .frow {
+      .gallery-grid {
         grid-template-columns: 1fr
       }
 
@@ -727,7 +618,8 @@
         transition: none
       }
 
-      .btn {
+      .btn,
+      .gallery-item img {
         transition: none
       }
     }
@@ -748,10 +640,10 @@
       </a>
       <nav class="nav-links" id="menu">
         <a href="services.html">Our Services</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="gallery.html" class="current" aria-current="page">Gallery</a>
         <a href="index.html#work">Our Work</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="current" aria-current="page">Contact</a>
+        <a href="contact.html">Contact</a>
         <a class="btn btn-red"
           href="https://wa.me/97470999809?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service" target="_blank"
           rel="noopener">
@@ -771,113 +663,91 @@
   <!-- ======================= PAGE HERO ======================= -->
   <section class="page-hero">
     <div class="wrap">
-      <span class="eyebrow">Qatar</span>
-      <h1 class="display">Let's get your<br>car <span class="r">sorted</span></h1>
-      <p>Message us on WhatsApp, call the workshop, or send the form below. Tell us the car and what it needs, and
-        we'll take it from there.</p>
-
-      <div class="contact-methods reveal">
-        <a class="cmethod" href="https://wa.me/97470999809" target="_blank" rel="noopener">
+      <span class="eyebrow">Gallery</span>
+      <h1 class="display">Our <span class="r">Gallery</span></h1>
+      <p>A closer look at the cars we work on and the fleets we maintain, from full engine rebuilds to daily
+        servicing.</p>
+      <div class="cta-stack">
+        <a class="btn btn-red btn-lg"
+          href="https://wa.me/97470999809?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
+          target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
           </svg>
-          <span class="lbl">WhatsApp</span>
-          <span class="val">+974 7099 9809</span>
+          Book on WhatsApp
         </a>
-        <a class="cmethod" href="tel:+97430677033">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-          <span class="lbl">Phone</span>
-          <span class="val">+974 3067 7033</span>
-        </a>
-        <a class="cmethod" href="mailto:q.usa.autoshop@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-            stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="m22 6-10 7L2 6" />
-          </svg>
-          <span class="lbl">Email</span>
-          <span class="val">q.usa.autoshop@gmail.com</span>
-        </a>
-        <a class="cmethod"
-          href="https://www.google.com/maps/search/?api=1&amp;query=Q+USA+Auto+Shop+Ezdan+Oasis+Al+Wukair+Qatar"
-          target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          <span class="lbl">Location</span>
-          <span class="val">Al Wukair, Qatar</span>
-        </a>
+        <a class="btn btn-ghost btn-lg" href="services.html">Our services</a>
       </div>
     </div>
   </section>
 
-  <!-- ======================= FORM + HOURS ======================= -->
-  <section class="section contact">
-    <div class="wrap contact-grid">
-      <div class="reveal">
-        <span class="eyebrow">Send a message</span>
-        <h2 class="display">Tell us<br>what's up</h2>
-
-        <form class="cform" id="contactForm">
-          <div class="frow">
-            <div>
-              <label for="cf-name">Name</label>
-              <input id="cf-name" name="name" type="text" required placeholder="Your name">
-            </div>
-            <div>
-              <label for="cf-phone">Phone</label>
-              <input id="cf-phone" name="phone" type="tel" required placeholder="+974 ...">
-            </div>
-          </div>
-          <div>
-            <label for="cf-car">Car make &amp; model</label>
-            <input id="cf-car" name="car" type="text" placeholder="e.g. Toyota Camry, 2020">
-          </div>
-          <div>
-            <label for="cf-message">What does your car need?</label>
-            <textarea id="cf-message" name="message" required
-              placeholder="Tell us about the issue or service you need..."></textarea>
-          </div>
-          <div>
-            <button class="btn btn-red btn-lg" type="submit">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
-              </svg>
-              Send via WhatsApp
-            </button>
-          </div>
-          <p class="alt">Prefer email? Write to us at <a
-              href="mailto:q.usa.autoshop@gmail.com">q.usa.autoshop@gmail.com</a></p>
-        </form>
-      </div>
-
-      <div class="hours reveal">
-        <span class="eyebrow">Opening hours</span>
-        <div class="hrow"><span class="d">Saturday</span><span class="t">8:00–20:00</span></div>
-        <div class="hrow"><span class="d">Sunday</span><span class="t">8:00–20:00</span></div>
-        <div class="hrow"><span class="d">Monday</span><span class="t">8:00–20:00</span></div>
-        <div class="hrow"><span class="d">Tuesday</span><span class="t">8:00–20:00</span></div>
-        <div class="hrow"><span class="d">Wednesday</span><span class="t">8:00–20:00</span></div>
-        <div class="hrow"><span class="d">Thursday</span><span class="t">8:00–20:00</span></div>
-        <div class="hrow"><span class="d">Friday</span><span class="t">8:00–20:00</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================= MAP ======================= -->
-  <section class="section no-pt">
+  <!-- ======================= FLEET ======================= -->
+  <section class="section" id="fleet">
     <div class="wrap">
-      <div class="map-wrap reveal">
-        <iframe src="https://www.google.com/maps?q=Q+USA+Auto+Shop+Ezdan+Oasis+Al+Wukair+Qatar&output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="sec-head reveal">
+        <span class="eyebrow">Fleet</span>
+        <h2 class="display">Vehicles we've<br>looked after</h2>
+        <p>From daily drivers to standout exotics parked right outside our doors in Al Wukair.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <span class="gallery-tag">Fleet</span>
+          <img src="assets/gallery8.jpg" alt="White BMW M3 with gold wheels outside Q USA Auto Shop">
+        </div>
+        <div class="gallery-item">
+          <span class="gallery-tag">Fleet</span>
+          <img src="assets/gallery2.jpg" alt="Lamborghinis parked outside the Q USA Auto Shop storefront">
+        </div>
+        <div class="gallery-item">
+          <span class="gallery-tag">Fleet</span>
+          <img src="assets/gallery4.jpg" alt="A row of daily-driver cars parked outside Q USA Auto Shop">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ENGINE WORK ======================= -->
+  <section class="section tone-deep" id="engine-work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Engine work</span>
+        <h2 class="display">Under the<br>hood</h2>
+        <p>Full engine rebuilds and hands-on mechanical work, handled by our specialist technicians.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item">
+          <span class="gallery-tag">Engine Work</span>
+          <img src="assets/gallery3.jpg" alt="Technician working on an exposed engine bay">
+        </div>
+        <div class="gallery-item">
+          <span class="gallery-tag">Engine Work</span>
+          <img src="assets/gallery5.jpg" alt="Technician assembling a rebuilt engine on a stand">
+        </div>
+        <div class="gallery-item">
+          <span class="gallery-tag">Engine Work</span>
+          <img src="assets/gallery7.jpg" alt="Team of technicians hoisting an engine with a crane">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CTA BANNER ======================= -->
+  <section class="section no-pt">
+    <div class="wrap cta-banner reveal">
+      <span class="eyebrow">Ready when you are</span>
+      <h2 class="display">Bring your<br>car in</h2>
+      <div class="cta-stack center">
+        <a class="btn btn-red btn-lg"
+          href="https://wa.me/97470999809?text=Hi%20Q%20USA%2C%20I%27d%20like%20to%20book%20a%20service"
+          target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3.2-.9-2.7-1.2-4.4-4-4.5-4.2-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2 1.3 2.3 1.5.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.9-.1 1.5z" />
+          </svg>
+          Chat on WhatsApp
+        </a>
+        <a class="btn btn-ghost btn-lg" href="contact.html">Contact us</a>
       </div>
     </div>
   </section>
@@ -952,31 +822,6 @@
           if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in')
         })
       }, 1400)
-    });
-
-    // highlight today's hours row
-    (function () {
-      var day = new Date().getDay(); // 0 Sun..6 Sat
-      var order = [6, 0, 1, 2, 3, 4, 5];   // rows Sat..Fri
-      var rows = document.querySelectorAll('.hours .hrow');
-      var idx = order.indexOf(day);
-      if (idx > -1 && rows[idx]) rows[idx].classList.add('today');
-    })();
-
-    // contact form -> open WhatsApp with a pre-filled message
-    var form = document.getElementById('contactForm');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var name = form.name.value.trim();
-      var phone = form.phone.value.trim();
-      var car = form.car.value.trim();
-      var message = form.message.value.trim();
-      var lines = ['Hi Q USA, my name is ' + name + '.'];
-      if (car) lines.push('Car: ' + car + '.');
-      lines.push(message);
-      lines.push('You can reach me on ' + phone + '.');
-      var text = encodeURIComponent(lines.join('\n\n'));
-      window.open('https://wa.me/97470999809?text=' + text, '_blank', 'noopener');
     });
   </script>
 </body>
